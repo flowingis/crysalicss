@@ -1,0 +1,151 @@
+@include block ('markdown') {
+
+  $title-color: $color-shark;
+  $article--text--color: $color-shark;
+  $table-alt-background: mix($color-barley-corn, $color-white, 10%);
+  $markdown-border: 2px solid $table-alt-background;
+
+  @include modifier ('documentation') {
+    border-top: $horizontal-border;
+    margin-top: s(4);
+    padding-top: s(4);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $title-color;
+    margin-bottom: s(0.5);
+    margin-top: s(2);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h1 { font-size: 36px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 28px; }
+  h4 { font-size: 24px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 16px; }
+
+  ul {
+    color: $article--text--color;
+    @extend %small-text;
+  }
+
+  code {
+    @extend %font-code;
+  }
+
+  pre {
+    @extend %font-code;
+    background-color: $code-background !important;
+    color: $code-color;
+    margin: s(2) 0 !important;
+    padding: s(1);
+    width: 100%;
+
+    code {
+      background-color: transparent;
+    }
+  }
+
+  p {
+    @extend %small-text;
+    color: $article--text--color;
+    line-height: 1.45;
+
+    & + p {
+      margin-top: s(1);
+    }
+
+    .zoom-image {
+      display: block;
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: $markdown-border;
+    margin: s(2) 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  abbr {
+    font-style: italic;
+    text-decoration: none;
+
+    &[title] {
+      cursor: help;
+      font-weight: 600;
+    }
+  }
+
+  @include media ('<tp') {
+    h1 { font-size: 32px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    h4 { font-size: 20px; }
+    h5 { font-size: 18px; }
+    h6 { font-size: 16px; }
+  }
+
+  table {
+    @extend %small-text;
+    margin: s(2) 0;
+    width: 100%;
+
+    td,
+    th {
+      padding: s(1);
+
+      &:last-child {
+        @include media ('<ml') {
+          display: none;
+        }
+      }
+    }
+
+    th {
+      background-color: mix($color-barley-corn, $color-white, 50%);
+    }
+
+    tr {
+      &:nth-child(even) {
+        td {
+          background-color: $table-alt-background;
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: $markdown-border;
+        }
+      }
+    }
+
+  }
+}

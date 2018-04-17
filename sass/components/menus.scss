@@ -1,0 +1,19 @@
+@include block ('menus') {
+
+  @include element ('title') {
+    margin-bottom: s(1);
+  }
+
+  @include element ('items') {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: s(-1);
+    margin-right: s(-1);
+  }
+
+  @include element ('item') {
+    @include media ('<ds') {
+      width: 100%;
+    }
+  }
+}

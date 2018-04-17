@@ -1,0 +1,74 @@
+metadata:
+  title: Project name
+  tab_title: Component library • Project name
+  description: CSS Component library for the project **project name**
+  footer_title: Project name component library
+  footer_description: Made with ❤ by [vitto](https://github.com/vitto/)
+  cssLibrary: test.css
+  logo: project-logo.svg
+  clipboard:
+    default: Clicca per copiare negli appunti
+    success: Codice copiato!
+    error: Il tuo browser non supporta questa azione
+  colors:
+    -
+      code: "#FFFFFF"
+      name: Light
+    -
+      code: "#282F20"
+      name: Dark
+    -
+      code: "#3768A6"
+      name: Deep
+    -
+      code: "transparent"
+      name: None
+  viewports:
+    -
+      name: Mobile portrait
+      prefix: MP
+      icon: smartphone
+      min: 320
+      max: 479
+    -
+      name: Mobile landscape
+      prefix: ML
+      icon: stay_primary_landscape
+      min: 480
+      max: 767
+    -
+      name: Tablet portrait
+      prefix: TP
+      icon: tablet_mac
+      min: 768
+      max: 1023
+    -
+      name: Tablet landscape
+      prefix: TL
+      icon: computer
+      min: 1024
+      max: 1439
+    -
+      name: Desktop small
+      prefix: DS
+      icon: desktop_windows
+      min: 1440
+      max: 1599
+    -
+      name: Desktop large
+      prefix: DL
+      icon: tv
+      min: 1600
+      max: 1920
+clean: true
+source: source/
+destination: build
+markdown:
+  gfm: true
+  langPrefix: 'language-'
+  smartypants: true
+  tables: true
+twig:
+  directory: twig
+  view: default.twig
+  cache: false
