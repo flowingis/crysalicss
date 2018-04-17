@@ -1,7 +1,7 @@
 @include block ('aside') {
 
   $logo-size: 64px;
-  $background-overlay: rgba($color-white, 0.75);
+  $background-overlay: rgba($color-light, 0.75);
 
   bottom: 0;
   left: 0;
@@ -42,7 +42,7 @@
 
     animation-duration: 2s;
     animation-name: go-out;
-    background-color: $color-white;
+    background-color: $color-light;
     box-shadow: shadow('card');
     height: 100%;
     overflow: auto;

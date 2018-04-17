@@ -1,9 +1,9 @@
 @include block ('aside-menu') {
 
-  $link-color: $color-shark;
-  $link-color-hover: $color-white;
-  $link-hover: mix($color-barley-corn, $color-white, 50%);
-  $link-active: $color-barley-corn;
+  $link-color: $color-dark;
+  $link-color-hover: $color-light;
+  $link-hover: mix($color-deep, $color-light, 50%);
+  $link-active: $color-deep;
   $menu-hover: $code-background;
 
   list-style-type: none;

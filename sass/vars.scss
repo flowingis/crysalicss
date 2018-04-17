@@ -1,8 +1,8 @@
 $library-font-sans: -apple-system, BlinkMacSystemFont, Helvetica, arial, lato, sans-serif;
 $library-font-monospace: $font-family-monospace;
 
-$horizontal-border: 2px solid $color-barley-corn;
-$code-color: mix($color-barley-corn, $color-white, 75%);
-$code-background: mix($color-barley-corn, $color-white, 10%);
-$example-background: mix($color-barley-corn, $color-white, 20%);
+$horizontal-border: 2px solid $color-deep;
+$code-color: mix($color-deep, $color-light, 75%);
+$code-background: mix($color-deep, $color-light, 10%);
+$example-background: mix($color-deep, $color-light, 20%);
 $backdrop-blur: blur(5px);

@@ -1,8 +1,8 @@
 @include block ('markdown') {
 
-  $title-color: $color-shark;
-  $article--text--color: $color-shark;
-  $table-alt-background: mix($color-barley-corn, $color-white, 10%);
+  $title-color: $color-dark;
+  $article--text--color: $color-dark;
+  $table-alt-background: mix($color-deep, $color-light, 10%);
   $markdown-border: 2px solid $table-alt-background;
 
   @include modifier ('documentation') {
@@ -130,7 +130,7 @@
     }
 
     th {
-      background-color: mix($color-barley-corn, $color-white, 50%);
+      background-color: mix($color-deep, $color-light, 50%);
     }
 
     tr {

@@ -2,8 +2,8 @@
   @extend %font-default;
   @extend %small-text;
 
-  background-color: $color-white;
-  color: $color-shark;
+  background-color: $color-light;
+  color: $color-dark;
   pointer-events: auto;
 
   @include media ('<ds') {

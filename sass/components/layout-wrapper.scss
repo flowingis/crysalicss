@@ -28,7 +28,7 @@
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-name: pulse;
-      background-color: $color-barley-corn;
+      background-color: $color-deep;
       bottom: 0;
       content: '';
       display: none;
@@ -51,7 +51,7 @@
 
   @include element ('grid') {
     align-items: flex-start;
-    background-color: $color-white;
+    background-color: $color-light;
     display: inline-flex;
     flex-direction: column;
     padding: s(1);

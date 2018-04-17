@@ -1,9 +1,9 @@
 @include block ('color') {
   $size: 24px;
 
-  background-color: $color-white;
+  background-color: $color-light;
   border-radius: $size;
-  box-shadow: 0 0 0 1px rgba($color-shark, 0.2) inset;
+  box-shadow: 0 0 0 1px rgba($color-dark, 0.2) inset;
   display: inline-block;
   height: $size;
   transition: box-shadow tween('movement');
@@ -15,6 +15,6 @@
   }
 
   @include modifier ('active') {
-    box-shadow: 0 0 0 1px $color-barley-corn inset;
+    box-shadow: 0 0 0 1px $color-deep inset;
   }
 }
