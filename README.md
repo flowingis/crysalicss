@@ -57,6 +57,6 @@ Some info about the project folders
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [material]: https://material.io/icons/
 [source_css_name]: https://github.com/vitto/crysalicss/blob/master/metalsmith.yml#L7
-[source_css_path]: https://github.com/vitto/crysalicss/blob/master/package.json#L16
+[source_css_path]: https://github.com/vitto/crysalicss/blob/master/package.json#L17
 [theme_colors]: https://github.com/vitto/crysalicss/blob/master/sass/_config/vars.scss
 [twig]: https://twig.symfony.com/
