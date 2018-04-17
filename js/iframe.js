@@ -1,5 +1,4 @@
 $(function () {
-
   if ($('.layout-nav').length === 0) {
     return
   }
