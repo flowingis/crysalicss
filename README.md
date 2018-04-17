@@ -3,6 +3,8 @@ A component library template to store your CSS code
 
 ---
 
+<img width="64" height="auto" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/crysalicss-logo.png">
+
 To test locally the component library usually at [this address](http://localhost:3000):
 
 ```
