@@ -5,7 +5,7 @@ A component library template to store your CSS code
 
 ---
 
-<img width="100%" height="auto" styles="border: 2px solid #999999; border-radius: 6px;" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/crysalicss-logo.png">
+<img width="100%" height="auto" style="border: 2px solid #999999; border-radius: 6px;" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/showreel.gif">
 
 To test locally the component library usually at [this address](http://localhost:3000):
 
