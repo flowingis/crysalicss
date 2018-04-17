@@ -1,4 +1,4 @@
-# component-library
+# CrysaliCSS
 A component library template to store your CSS code
 
 ---
