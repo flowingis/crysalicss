@@ -46,7 +46,7 @@ Some info about the project folders
 | Folder | Description |
 |-|-|
 | `assets` | Where all images are stored. |
-| `js` | Where all **JavaScript** files are stored, like iframe nav interaction |
+| `js` | Where all **JavaScript** files are stored, like iframe nav or clipboard interaction. |
 | `posts` | Where all **Markdown** documentation posts are stored. You will add HTML components and how they work with [markdown syntax][markdown]. |
 | `sass` | The component library styles, you can customize it's [main colors here][theme_colors]. |
 | `src` | Just source files, not used inside the build. |
