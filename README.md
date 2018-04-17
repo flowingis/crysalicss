@@ -23,25 +23,25 @@ npm run watch
 
 ---
 
-To build your library without run any watchers / server http:
+To build your library without run any watchers / HTTP servers:
 
 ```
 npm run build
 ```
 
-The library will be built inside `build` folder with relative paths, so it should run also without HTTP server.
+The library will be built inside `build` folder with relative paths, this means it should run without the HTTP server.
 
 ---
 
 #### Configuration
 
-This is the configuration of the component library ONLY.
+This is the configuration of **CrysaliCSS** component library ONLY.
 
-To let your **CSS source** run inside the component library, you'll need to customize the `source-styles` npm script [stored here][source_css].
+To let your **CSS source** run inside the component library, you'll need to customize the `source-styles` npm script [stored here][source_css_path].
 
 | File | Description |
 |-|-|
-| `metalsmith.yml` | This is the main **Metalsmith** configuration used inside `metalsmith.js`, there is background and viewports configuration, then all the stuff you need to customize. Be sure your [CSS source is correctly set here][souce_css_name]. The **icons** are based on [Material design icons][material] codes. |
+| `metalsmith.yml` | This is the main **Metalsmith** configuration used inside `metalsmith.js`, there is background and viewports configuration, then all the stuff you need to customize. Be sure your [CSS source is correctly set here][source_css_name]. The **icons** are based on [Material design icons][material] codes. |
 
 Some info about the project folders
 
@@ -54,9 +54,9 @@ Some info about the project folders
 | `src` | Just source files, not used inside the build. |
 | `twig` | The **HTML templates** written with [Twig][twig]. |
 
-[material]: https://material.io/icons/
-[souce_css_name]: https://github.com/vitto/crysalicss/blob/master/metalsmith.yml#L7
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[source_css]: https://github.com/vitto/crysalicss/blob/master/package.json#L16
+[material]: https://material.io/icons/
+[source_css_name]: https://github.com/vitto/crysalicss/blob/master/metalsmith.yml#L7
+[source_css_path]: https://github.com/vitto/crysalicss/blob/master/package.json#L16
 [theme_colors]: https://github.com/vitto/crysalicss/blob/master/sass/_config/vars.scss
 [twig]: https://twig.symfony.com/
