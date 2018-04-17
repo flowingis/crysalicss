@@ -37,15 +37,19 @@ This is the configuration of the component library ONLY.
 
 | File | Description |
 |-|-|
-| `metalsmith.yml` | This is the main **Metalsmith** configuration used inside `metalsmith.js` |
+| `metalsmith.yml` | This is the main **Metalsmith** configuration used inside `metalsmith.js`, there is background and viewports configuration, then all the stuff you need to customize. |
 
 Some info about the project folders
 
 | Folder | Description |
 |-|-|
-| `assets` | Where all images are stored |
+| `assets` | Where all images are stored. |
 | `js` | Where all **JavaScript** files are stored, like iframe nav interaction |
-| `posts` | Where all **Markdown** documentation posts are stored |
-| `sass` | The component library styles |
-| `src` | Just source files, not used inside the build |
-| `twig` | The **HTML templates** written with Twig |
+| `posts` | Where all **Markdown** documentation posts are stored. You will add HTML components and how they work with [markdown syntax here][markdown]. |
+| `sass` | The component library styles, you can customize it's [main colors here][theme_colors]. |
+| `src` | Just source files, not used inside the build. |
+| `twig` | The **HTML templates** written with [Twig][twig]. |
+
+[markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[theme_colors]: https://github.com/vitto/crysalicss/blob/master/sass/_config/vars.scss
+[twig]: https://twig.symfony.com/
