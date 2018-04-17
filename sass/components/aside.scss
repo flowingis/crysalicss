@@ -12,7 +12,12 @@
   @include element ('logo') {
     height: auto;
     margin: s(4);
+    transition: margin tween('movement');
     width: $logo-size;
+
+    @include modifier ('fullscreen') {
+      margin: s(1);
+    }
   }
 
   @include element ('go-home') {

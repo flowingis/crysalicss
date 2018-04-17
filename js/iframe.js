@@ -86,6 +86,7 @@ $(function () {
   })
 
   $switchFullscreen.on('change', function () {
+    $('.aside__open .aside__logo').toggleClass('aside__logo--fullscreen')
     $('.layout-limiter').toggleClass('layout-limiter--fullscreen')
   })
 

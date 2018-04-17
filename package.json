@@ -5,10 +5,10 @@
   "main": "metalsmith.js",
   "scripts": {
     "build-and-reload": "npm run source && npm run metalsmith && ./node_modules/browser-sync/dist/bin.js reload",
-    "build": "node metalsmith.js",
+    "build": "npm run clean && npm run source && npm run sass && npm run js && npm run metalsmith",
     "metalsmith": "node metalsmith.js",
     "clean": "rm -rf ./build || true rm -rf ./source || true && mkdir ./source && mkdir -p ./source/css || true && mkdir -p ./source/js || true  && mkdir -p ./source/img || true",
-    "dev": "npm run clean && npm run source && npm run sass && npm run js && npm run metalsmith && concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-http' 'npm run watch-html'",
+    "dev": "npm run build && concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-http' 'npm run watch-html'",
     "js": "./node_modules/bundle-js/bin/bundle-js.js ./js/main.js -o ./source/js/metalsmith.js",
     "sass": "./node_modules/node-sass/bin/node-sass ./sass/import.scss source/css/metalsmith.css && postcss --use autoprefixer --autoprefixer.browsers '> 5%' -o source/css/metalsmith.css source/css/metalsmith.css && cleancss -o source/css/metalsmith.css source/css/metalsmith.css",
     "source-assets": "cp -r ./assets/* ./source/img",
@@ -21,7 +21,7 @@
     "simple-http": "python -m SimpleHTTPServer 8000",
     "watch-http": "./node_modules/browser-sync/dist/bin.js start --server ./build",
     "watch-js": "watch -p './js/**/*.js' -c 'npm run js'",
-    "watch": "npm run clean && npm run source && npm run sass && npm run js && npm run metalsmith && concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-html'"
+    "watch": "npm run build && concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-html'"
   },
   "repository": {
     "type": "git",
