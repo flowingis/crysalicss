@@ -3,7 +3,7 @@ metadata:
   tab_title: Component library • Project name
   description: CSS Component library for the project **project name**
   footer_title: Project name component library
-  footer_description: Made with ❤ by [vitto](https://github.com/vitto/)
+  footer_description: [CrysaliCSS](https://github.com/vitto/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/)
   cssLibrary: test.css
   logo: project-logo.svg
   clipboard:
