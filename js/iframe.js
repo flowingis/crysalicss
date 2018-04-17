@@ -1,4 +1,9 @@
 $(function () {
+
+  if ($('.layout-nav').length === 0) {
+    return
+  }
+
   var $buttonSetColor = $('.button-option--color')
   var $buttonSetViewport = $('.button-option--viewport')
   var $iframes = $('.layout-wrapper__iframe')
