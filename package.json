@@ -4,21 +4,22 @@
   "description": "A component library template for CSS code",
   "main": "metalsmith.js",
   "scripts": {
-    "build": "npm run source && node metalsmith.js",
     "build-and-reload": "npm run source && node metalsmith.js && ./node_modules/browser-sync/dist/bin.js reload",
+    "build": "npm run source && node metalsmith.js",
+    "dev": "concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-http' 'npm run watch-html'",
     "js": "./node_modules/bundle-js/bin/bundle-js.js ./js/main.js -o ./source/js/metalsmith.js",
     "sass": "./node_modules/node-sass/bin/node-sass ./sass/import.scss source/css/metalsmith.css && postcss --use autoprefixer --autoprefixer.browsers '> 5%' -o source/css/metalsmith.css source/css/metalsmith.css && cleancss -o source/css/metalsmith.css source/css/metalsmith.css",
     "source-assets": "cp -r ./assets/* ./source/img",
     "source-clean": "rm -rf ./source || true && mkdir ./source && mkdir -p ./source/css && mkdir -p ./source/js && mkdir -p ./source/img",
     "source-posts": "cp -r posts/* source/",
-    "source": "npm run source-assets && npm run source-posts && npm run source-styles && mkdir -p ./build",
     "source-styles": "cp src/test.css source/css/test.css",
+    "source": "npm run source-assets && npm run source-posts && npm run source-styles && mkdir -p ./build",
     "vendor-css": "cp ./node_modules/prismjs/themes/prism.css ./source/css/prism.css && cp -r ./node_modules/material-design-icons/iconfont/* ./source/css",
     "watch-css": "watch -p './sass/**/*.scss' -c 'npm run sass'",
     "watch-html": "watch -p './src/test.css' -p './posts/**/*.md' -p './metalsmith.yml' -p './metalsmith.js' -p './source/**/*.md' -p './source/**/*.css' -p './source/**/*.js'  -p './twig/**/*.twig' -c 'npm run build-and-reload'",
     "watch-http": "./node_modules/browser-sync/dist/bin.js start --server ./build",
-    "dev": "concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-http' 'npm run watch-html'",
-    "watch-js": "watch -p './js/**/*.js' -c 'npm run js'"
+    "watch-js": "watch -p './js/**/*.js' -c 'npm run js'",
+    "watch": "concurrently --kill-others 'npm run watch-css' 'npm run watch-js' 'npm run watch-html'"
   },
   "repository": {
     "type": "git",

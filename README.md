@@ -3,13 +3,19 @@ A component library template to store your CSS code
 
 ---
 
-To test locally the component library usually at this address http://localhost:3000:
+To test locally the component library usually at [this address](http://localhost:3000):
 
 ```
 npm run dev
 ```
 
 This script will run watchers and **browser sync** to ensure everything you update will be detected, so `twig` templates, `sass` styles, `md` posts, `js` scripts, assets and also `metalsmith.js` and `metalsmith.yml` files.
+
+If you are working with a **virtual machine** and you don't need **browser sync**, you can run watchers only with this:
+
+```
+npm run watch
+```
 
 ---
 
