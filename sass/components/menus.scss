@@ -13,7 +13,11 @@
   }
 
   @include element ('item') {
-    @include media ('<ds') {
+    @include media ('<tl') {
+      width: 25%;
+    }
+
+    @include media ('<tp') {
       width: 100%;
     }
   }
