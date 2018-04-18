@@ -1,18 +1,18 @@
-<img width="64" height="auto" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/crysalicss-logo.png">
+<img width="64" height="auto" src="https://raw.githubusercontent.com/ideatosrl/crysalicss/master/src/crysalicss-logo.png">
 
 # CrysaliCSS
 A component library template to store your CSS code
 
 ---
 
-<img width="100%" height="auto" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/showreel.gif">
+<img width="100%" height="auto" src="https://raw.githubusercontent.com/ideatosrl/crysalicss/master/src/showreel.gif">
 
 #### Installation
 
 To install **CrysaliCSS** just clone it:
 
 ```
-git clone https://github.com/vitto/crysalicss.git component-library && rm -rf component-library/.git
+git clone https://github.com/ideatosrl/crysalicss.git component-library && rm -rf component-library/.git
 ```
 
 This script will create a folder named `component-library` where the template is ready to be used to host your CSS components. This also removes the `.git` folder to ensure it is correctly tracked into your project.
@@ -70,11 +70,11 @@ Some info about the project folders
 
 ---
 
-[CrysaliCSS](https://github.com/vitto/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it).
+[CrysaliCSS](https://github.com/ideatosrl/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it).
 
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [material]: https://material.io/icons/
-[source_css_name]: https://github.com/vitto/crysalicss/blob/master/metalsmith.yml#L7
-[source_css_path]: https://github.com/vitto/crysalicss/blob/master/package.json#L17
-[theme_colors]: https://github.com/vitto/crysalicss/blob/master/sass/_config/vars.scss
+[source_css_name]: https://github.com/ideatosrl/crysalicss/blob/master/metalsmith.yml#L7
+[source_css_path]: https://github.com/ideatosrl/crysalicss/blob/master/package.json#L17
+[theme_colors]: https://github.com/ideatosrl/crysalicss/blob/master/sass/_config/vars.scss
 [twig]: https://twig.symfony.com/
