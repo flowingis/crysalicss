@@ -13,11 +13,11 @@
   }
 
   @include element ('item') {
-    @include media ('<tl') {
-      width: 25%;
+    @include media ('<=ml') {
+      width: 50%;
     }
 
-    @include media ('<tp') {
+    @include media ('<=mp') {
       width: 100%;
     }
   }
