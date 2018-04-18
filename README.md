@@ -7,6 +7,20 @@ A component library template to store your CSS code
 
 <img width="100%" height="auto" src="https://raw.githubusercontent.com/vitto/crysalicss/master/src/showreel.gif">
 
+#### Installation
+
+To install **CrysaliCSS** just clone it:
+
+```
+git clone https://github.com/vitto/crysalicss.git component-library && rm -rf component-library/.git
+```
+
+This script will create a folder named `component-library` where the template is ready to be used to host your CSS components.
+
+---
+
+#### Development
+
 To test locally the component library usually at [this address](http://localhost:3000):
 
 ```
