@@ -33,7 +33,7 @@
 
   @include element ('language') {
     @extend %tiny-bold-text;
-    background-color: $color-light;
+    background-color: $color-03;
     color: $code-color;
     padding: s(0.5);
     text-transform: uppercase;

@@ -1,11 +1,11 @@
 @include block ('aside-menu') {
 
-  $link-color: $text-color;
-  $link-color-menu-hover: $title-color;
+  $link-background-active: $color-02;
+  $link-background-hover: mix($color-02, $color-03, 50%);
   $link-color-hover: $code-background;
-  $link-hover: mix($color-deep, $color-light, 50%);
-  $link-active: $color-deep;
-  $menu-hover: $code-background;
+  $link-color: $text-color;
+  $menu-background-hover: $code-background;
+  $menu-link-color-hover: $title-color;
 
   list-style-type: none;
   margin: 0;
@@ -13,15 +13,15 @@
   transition: background-color tween('hover');
 
   &:hover {
-    background-color: $menu-hover;
+    background-color: $menu-background-hover;
 
     @include element ('title') {
-      border-color: $link-hover;
+      border-color: $link-background-hover;
       border-radius: 0;
     }
 
     @include element ('link') {
-      color: $link-color-menu-hover;
+      color: $menu-link-color-hover;
     }
   }
 
@@ -63,22 +63,22 @@
     }
 
     &:hover {
-      background-color: $link-hover;
+      background-color: $link-background-hover;
       color: $link-color-hover !important;
 
       &::after {
-        background-color: $link-hover;
+        background-color: $link-background-hover;
         transform: translate(100%, 0);
       }
     }
 
     @include modifier ('active') {
-      background-color: $link-active;
+      background-color: $link-background-active;
       color: $link-color-hover !important;
       pointer-events: none;
 
       &::after {
-        background-color: $link-active;
+        background-color: $link-background-active;
         transform: translate(100%, 0);
       }
     }

@@ -34,7 +34,7 @@ $(function () {
         .css('background-color', setting.background)
     } else {
       $iframe.closest('.layout-wrapper__grid')
-        .addClass('layout-wrapper__grid--' + setting.background)
+        .addClass('layout-wrapper__grid--transparent')
         .attr('style', '')
     }
 
@@ -114,7 +114,9 @@ $(function () {
   $buttonSetColor.on('click', function (e) {
     e.preventDefault()
     $buttonSetColor.removeClass('button-option--active')
+    $('.color').removeClass('color--active')
     $(this).addClass('button-option--active')
+    $(this).find('.color').addClass('color--active')
 
     setting.background = $(this).attr('data-color')
 

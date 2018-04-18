@@ -1,9 +1,9 @@
 @function input-switch($property) {
   @return get((
-      'box-checked': $color-deep,
-      'box-unchecked': mix($color-deep, $color-light),
-      'dot-checked': $color-light,
-      'dot-unchecked': $color-light
+      'box-checked': $color-02,
+      'box-unchecked': mix($color-02, $color-03),
+      'dot-checked': $color-03,
+      'dot-unchecked': $color-03
   ), $property);
 }
 

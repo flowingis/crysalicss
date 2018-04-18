@@ -4,7 +4,7 @@
   margin-top: s(5);
   user-select: none;
 
-  @include media ('<=ds') {
+  @include media ('<ds') {
     text-align: center;
   }
 

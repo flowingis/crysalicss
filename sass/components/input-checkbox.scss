@@ -31,7 +31,7 @@
 
 @include block ('input-checkbox') {
 
-  $unchecked: $color-deep;
+  $unchecked: $color-02;
 
   align-items: flex-start;
   border-radius: radius('medium');
@@ -51,10 +51,10 @@
     transition: color tween('hover');
   }
 
-  @include input-checkbox-state($color-deep);
+  @include input-checkbox-state($color-02);
 
   // @include modifier ('avoid') {
-  //   @include input-checkbox-state($color-dark);
+  //   @include input-checkbox-state($color-01);
   // }
 
 }

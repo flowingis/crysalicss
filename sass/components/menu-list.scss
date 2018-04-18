@@ -1,6 +1,6 @@
 @include block ('menu-list') {
 
-  $link-hover: mix($color-deep, $color-light, 50%);
+  $link-hover: mix($color-02, $color-03, 50%);
 
   list-style-type: none;
   margin: 0;
@@ -47,7 +47,7 @@
 
     &:hover {
       background-color: $link-hover;
-      color: $color-light;
+      color: $color-03;
 
       &::after {
         background-color: $link-hover;

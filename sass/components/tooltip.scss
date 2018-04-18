@@ -1,12 +1,12 @@
 @include block ('tooltip') {
 
-  $color-background: $color-deep;
-  $color-title: $color-light;
-  $color-text: mix($color-light, $color-deep, 65%);
-  $border: 0 0 0 1px $color-light;
-  $border-text: mix($color-deep, $color-light);
-  $active-item-background: $color-light;
-  $active-item-color: $color-deep;
+  $color-background: $color-02;
+  $color-title: $color-03;
+  $color-text: mix($color-03, $color-02, 65%);
+  $border: 0 0 0 1px $color-03;
+  $border-text: mix($color-02, $color-03);
+  $active-item-background: $color-03;
+  $active-item-color: $color-02;
   $arrow-size: 8px;
   $border-radius: 4px;
   $ease: 0.5s ease('out-expo');
