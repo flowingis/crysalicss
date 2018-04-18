@@ -4,7 +4,7 @@
       <ul class="layout-nav-group">
         {% for color in metadata.colors %}
           <li class="layout-nav-group__item">
-            <a class="button-option button-option--color" data-color="{{ color.code }}" href="#">
+            <span class="button-option button-option--color" data-color="{{ color.code }}">
               <div class="button-option__icon">
                 {% if color.code == 'transparent' %}
                   <div class="color color--transparent"></div>
@@ -15,7 +15,7 @@
               <div class="button-option__text">
                 {{ color.name }}
               </div>
-            </a>
+            </span>
           </li>
         {% endfor %}
       </ul>
@@ -73,14 +73,14 @@
       <ul class="layout-nav-group">
         {% for viewport in metadata.viewports %}
           <li class="layout-nav-group__item tooltip">
-            <a class="button-option button-option--viewport" data-viewport="{{ viewport.min }},{{ viewport.max }}" href="#">
+            <span class="button-option button-option--viewport" data-viewport="{{ viewport.min }},{{ viewport.max }}" href="#">
               <div class="button-option__icon">
                 <div class="viewport-icon material-icons">{{ viewport.icon }}</div>
               </div>
               <div class="button-option__text">
                 {{ viewport.prefix }}
               </div>
-            </a>
+            </span>
             <div class="tooltip__container">
               <div class="tooltip__balloon">
                 <div class="tooltip__title">

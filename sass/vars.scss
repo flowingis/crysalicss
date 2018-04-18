@@ -3,6 +3,8 @@ $library-font-monospace: $font-family-monospace;
 
 $horizontal-border: 2px solid $color-deep;
 $code-color: mix($color-deep, $color-light, 75%);
+$text-color: mix($color-dark, $color-light, 70%);
+$title-color: $color-dark;
 $code-background: mix($color-deep, $color-light, 10%);
 $example-background: mix($color-deep, $color-light, 20%);
 $backdrop-blur: blur(5px);

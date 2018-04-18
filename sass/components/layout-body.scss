@@ -3,7 +3,7 @@
   @extend %small-text;
 
   background-color: $color-light;
-  color: $color-dark;
+  color: $text-color;
   pointer-events: auto;
 
   @include media ('<ds') {
@@ -12,9 +12,5 @@
 
   @include modifier ('no-scroll') {
     overflow: hidden;
-  }
-
-  a {
-    color: inherit;
   }
 }

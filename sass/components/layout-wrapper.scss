@@ -97,6 +97,7 @@
 
   @include element ('title') {
     @extend %title;
+    color: $title-color;
     margin-bottom: s(1);
   }
 

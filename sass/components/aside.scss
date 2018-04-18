@@ -15,6 +15,10 @@
     transition: margin tween('movement');
     width: $logo-size;
 
+    @include media ('<tp') {
+      margin: s(1);
+    }
+
     @include modifier ('fullscreen') {
       margin: s(1);
     }

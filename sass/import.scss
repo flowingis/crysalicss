@@ -7,6 +7,8 @@ $use-core-base: true;
 
 @import 'extends/typography';
 
+@import 'base';
+
 @import 'components/aside-menu';
 @import 'components/aside';
 @import 'components/button-option';

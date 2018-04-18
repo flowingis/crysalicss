@@ -10,6 +10,7 @@
 
   @include element ('title') {
     @extend %big-title;
+    color: $title-color;
   }
 
   @include element ('description') {

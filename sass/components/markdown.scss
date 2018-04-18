@@ -1,7 +1,6 @@
 @include block ('markdown') {
 
-  $title-color: $color-dark;
-  $article--text--color: $color-dark;
+  $article-text-color: $text-color;
   $table-alt-background: mix($color-deep, $color-light, 10%);
   $markdown-border: 2px solid $table-alt-background;
 
@@ -34,12 +33,13 @@
   h6 { font-size: 16px; }
 
   ul {
-    color: $article--text--color;
+    color: $article-text-color;
     @extend %small-text;
   }
 
   code {
     @extend %font-code;
+    padding: s(0.125) s(0.25);
   }
 
   pre {
@@ -57,7 +57,7 @@
 
   p {
     @extend %small-text;
-    color: $article--text--color;
+    color: $article-text-color;
     line-height: 1.45;
 
     & + p {
@@ -76,7 +76,10 @@
     strong {
       font-weight: 600;
     }
+  }
 
+  strong {
+    color: $title-color;
   }
 
   img {
@@ -131,6 +134,7 @@
 
     th {
       background-color: mix($color-deep, $color-light, 50%);
+      color: $title-color;
     }
 
     tr {

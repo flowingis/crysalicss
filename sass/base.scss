@@ -1,0 +1,8 @@
+a {
+  color: inherit;
+  transition: color tween('hover');
+
+  &:hover {
+    color: $title-color;
+  }
+}

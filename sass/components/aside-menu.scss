@@ -1,7 +1,8 @@
 @include block ('aside-menu') {
 
-  $link-color: $color-dark;
-  $link-color-hover: $color-light;
+  $link-color: $text-color;
+  $link-color-menu-hover: $title-color;
+  $link-color-hover: $code-background;
   $link-hover: mix($color-deep, $color-light, 50%);
   $link-active: $color-deep;
   $menu-hover: $code-background;
@@ -13,13 +14,25 @@
 
   &:hover {
     background-color: $menu-hover;
+
+    @include element ('title') {
+      border-color: $link-hover;
+      border-radius: 0;
+    }
+
+    @include element ('link') {
+      color: $link-color-menu-hover;
+    }
   }
 
   @include element ('title') {
     @extend %font-code;
+    border-bottom: 2px solid transparent;
     border-radius: 4px;
     margin-bottom: s(1);
     padding: s(0.5) s(1);
+    padding-top: (s(0.5) + 2px);
+    transition: border tween('hover');
   }
 
   @include element ('item') {
@@ -33,6 +46,7 @@
     padding: s(0.5) s(1);
     position: relative;
     text-decoration: none;
+    transition: none;
     white-space: nowrap;
 
     &::after {
@@ -50,7 +64,7 @@
 
     &:hover {
       background-color: $link-hover;
-      color: $link-color-hover;
+      color: $link-color-hover !important;
 
       &::after {
         background-color: $link-hover;

@@ -1,6 +1,7 @@
 @include block ('menus') {
 
   @include element ('title') {
+    color: $title-color;
     margin-bottom: s(1);
   }
 
