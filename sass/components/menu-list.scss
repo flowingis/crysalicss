@@ -1,6 +1,8 @@
 @include block ('menu-list') {
 
-  $link-hover: mix($color-02, $color-03, 50%);
+  $default-link-color: $text-color;
+  $hover-link-background: $color-02; //mix($color-02, $color-03, 50%);
+  $hover-link-color: $color-03;
 
   list-style-type: none;
   margin: 0;
@@ -15,6 +17,7 @@
 
   @include element ('link') {
     @extend %small-text;
+    color: $default-link-color;
     display: block;
     margin-left: s(0.5);
     margin-right: s(0.5);
@@ -46,16 +49,16 @@
     }
 
     &:hover {
-      background-color: $link-hover;
-      color: $color-03;
+      background-color: $hover-link-background;
+      color: $hover-link-color;
 
       &::after {
-        background-color: $link-hover;
+        background-color: $hover-link-background;
         transform: translate(100%, 0);
       }
 
       &::before {
-        background-color: $link-hover;
+        background-color: $hover-link-background;
         transform: translate(-100%, 0);
       }
     }

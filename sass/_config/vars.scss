@@ -2,6 +2,20 @@ $font-family-sans: -apple-system, BlinkMacSystemFont, lato, Helvetica, arial, sa
 $font-family-serif: georgia, 'times new roman', times, serif;
 $font-family-monospace: monaco, menlo, 'courier new', monospace;
 
-$color-01: #22221f;
-$color-02: #345b71;
-$color-03: #fff;
+$scheme: 'ideato';
+
+$color-01: #22221f !default;
+$color-02: #345b71 !default;
+$color-03: #fff !default;
+$code-desaturate: 0% !default;
+$menu-desaturate: 20% !default;
+$background-vs-menu-difference: 96% !default;
+
+@if $scheme == 'ideato' {
+  $color-01: #2b2b2b;
+  $color-02: #e3574d;
+  $color-03: #fff;
+  $code-desaturate: 40%;
+  $menu-desaturate: 20%;
+  $background-vs-menu-difference: 100%;
+}

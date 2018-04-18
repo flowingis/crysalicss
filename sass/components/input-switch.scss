@@ -9,7 +9,7 @@
 
 @include block ('input-switch') {
 
-  $dot-size: 20px;
+  $dot-size: 18px;
   $padding-size: (radius('large') - radius('small'));
 
   align-items: center;

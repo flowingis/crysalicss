@@ -2,6 +2,7 @@
 
   $logo-size: 64px;
   $background-overlay: rgba($main-background, 0.75);
+  $background-menu: $menu-background;
 
   bottom: 0;
   left: 0;
@@ -53,7 +54,7 @@
 
     animation-duration: 2s;
     animation-name: go-out;
-    background-color: $color-03;
+    background-color: $background-menu;
     box-shadow: shadow('card');
     height: 100%;
     overflow: auto;

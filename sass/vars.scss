@@ -1,10 +1,13 @@
 $library-font-sans: $font-family-sans;
 $library-font-monospace: $font-family-monospace;
 $backdrop-blur: blur(5px);
-$code-background: mix($color-02, $color-03, 10%);
-$code-color: mix($color-02, $color-03, 75%);
-$example-background: mix($color-02, $color-03, 20%);
+
+$code-background: desaturate(mix($color-02, $color-03, 10%), $code-desaturate);
+$code-color: desaturate(mix($color-02, $color-03, 75%), $code-desaturate);
+
+$example-background: desaturate(mix($color-02, $color-03, 20%), $code-desaturate);
 $horizontal-border: 2px solid $color-02;
-$main-background: $color-03;
+$main-background: mix($color-03, $color-02, $background-vs-menu-difference);
+$menu-background: $color-03;
 $text-color: mix($color-01, $color-03, 70%);
 $title-color: $color-01;
