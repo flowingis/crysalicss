@@ -9,8 +9,11 @@ $code-desaturate: 0% !default;
 $color-01: #22221f !default;
 $color-02: #345b71 !default;
 $color-03: #fff !default;
-$logo-size: 64px;
-$logo-margin: s(4);
+$font-family-code: $font-family-monospace !default;
+$font-family-text: $font-family-sans !default;
+$font-family-title: $font-family-sans !default;
+$logo-margin: s(4) !default;
+$logo-size: 64px !default;
 $menu-desaturate: 20% !default;
 
 @if $scheme == 'ideato' {
@@ -19,7 +22,10 @@ $menu-desaturate: 20% !default;
   $color-01: #2b2b2b;
   $color-02: #e3574d;
   $color-03: #fff;
-  $logo-size: 96px;
+  $font-family-code: $font-family-monospace;
+  $font-family-text: $font-family-sans;
+  $font-family-title: $font-family-sans;
   $logo-margin: s(2.5);
+  $logo-size: 96px;
   $menu-desaturate: 20%;
 }

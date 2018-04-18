@@ -1,16 +1,19 @@
 %big-title {
+  font-family: $font-family-title;
   font-size: font-size('big');
   font-weight: font-weight('bold');
   letter-spacing: -1px;
 }
 
 %large-title {
+  font-family: $font-family-title;
   font-size: font-size('large');
   font-weight: font-weight('bold');
   letter-spacing: -1px;
 }
 
 %title {
+  font-family: $font-family-title;
   font-size: font-size('normal');
   font-weight: font-weight('bold');
 }
@@ -31,7 +34,7 @@
 }
 
 %font-default {
-  font-family: $library-font-sans;
+  font-family: $font-family-text;
   font-size: font-size('normal');
   font-weight: 300;
 }
@@ -39,6 +42,6 @@
 %font-code {
   background-color: $code-background;
   color: $code-color;
-  font-family: $font-family-monospace;
+  font-family: $font-family-code;
   font-size: font-size('small');
 }

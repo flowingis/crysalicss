@@ -17,6 +17,7 @@
   h5,
   h6 {
     color: $title-color;
+    font-family: $font-family-title;
     margin-bottom: s(0.5);
     margin-top: s(2);
 
@@ -92,10 +93,6 @@
     border: 0;
     border-top: $markdown-border;
     margin: s(2) 0;
-  }
-
-  a {
-    color: inherit;
   }
 
   abbr {
