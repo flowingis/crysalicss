@@ -1,6 +1,5 @@
 @include block ('aside') {
 
-  $logo-size: 64px;
   $background-overlay: rgba($main-background, 0.75);
   $background-menu: $menu-background;
 
@@ -13,7 +12,7 @@
 
   @include element ('logo') {
     height: auto;
-    margin: s(4);
+    margin: $logo-margin;
     transition: margin tween('movement');
     width: $logo-size;
 
