@@ -15,7 +15,7 @@ To install **CrysaliCSS** just clone it:
 git clone https://github.com/vitto/crysalicss.git component-library && rm -rf component-library/.git
 ```
 
-This script will create a folder named `component-library` where the template is ready to be used to host your CSS components.
+This script will create a folder named `component-library` where the template is ready to be used to host your CSS components. This also removes the `.git` folder to ensure it is correctly tracked into your project.
 
 ---
 
