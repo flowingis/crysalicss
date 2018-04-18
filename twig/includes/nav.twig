@@ -19,31 +19,31 @@
           </li>
         {% endfor %}
       </ul>
-      <ul class="layout-nav-group layout-nav-group--fill">
-        <li class="layout-nav-group__item">
-          <label class="input-switch">
-            <input id="fullscreen" class="input-switch__field" type="checkbox" name="switch-checkbox-name" value="1">
-            <div class="input-switch__box">
-              <div class="input-switch__dot"></div>
-            </div>
-            <div class="input-switch__text">
-              Fullscreen
-            </div>
-          </label>
-        </li>
-      </ul>
-      <ul class="layout-nav-group layout-nav-group--fill">
-        <li class="layout-nav-group__item">
-          <label class="input-switch">
-            <input id="show-hide-code" class="input-switch__field" type="checkbox" name="switch-checkbox-name" value="1" checked>
-            <div class="input-switch__box">
-              <div class="input-switch__dot"></div>
-            </div>
-            <div class="input-switch__text">
-              Codice
-            </div>
-          </label>
-        </li>
+      <ul class="layout-nav-group layout-nav-group--vertical">
+        {% if metadata.fullscreen is defined %}
+          <li class="layout-nav-group__item">
+            <label class="input-checkbox">
+              <input id="fullscreen" class="input-checkbox__field" type="checkbox" name="some-name" value="1">
+              <i class="input-checkbox__icon material-icons">fullscreen</i>
+              <i class="input-checkbox__icon material-icons">fullscreen_exit</i>
+              <div class="input-checkbox__text">
+                {{ metadata.fullscreen }}
+              </div>
+            </label>
+          </li>
+        {% endif %}
+        {% if metadata.code is defined %}
+          <li class="layout-nav-group__item">
+            <label class="input-checkbox">
+              <input id="show-hide-code" class="input-checkbox__field" type="checkbox" name="some-name" value="1" checked>
+              <i class="input-checkbox__icon material-icons">code</i>
+              <i class="input-checkbox__icon material-icons">visibility_off</i>
+              <div class="input-checkbox__text">
+                {{ metadata.code }}
+              </div>
+            </label>
+          </li>
+        {% endif %}
       </ul>
     </div>
 

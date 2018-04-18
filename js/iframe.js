@@ -77,7 +77,13 @@ $(function () {
   })
 
   $switchShowHideCode.on('change', function () {
-    $('.code').toggleClass('code--hidden')
+    var showCode = true
+    $(this).is(':checked') ? showCode = true : showCode = false
+    if (showCode) {
+      $('.code').removeClass('code--hidden')
+    } else {
+      $('.code').addClass('code--hidden')
+    }
   })
 
   $switchMinMax.on('change', function () {

@@ -24,7 +24,7 @@
   }
 
   @include element ('row') {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
 
     & + & {

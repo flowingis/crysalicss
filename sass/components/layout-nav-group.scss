@@ -7,8 +7,8 @@
     margin-left: s(1);
   }
 
-  @include modifier ('fill') {
-    margin-top: s(1);
+  @include modifier ('vertical') {
+    flex-direction: column;
     width: 100%;
   }
 

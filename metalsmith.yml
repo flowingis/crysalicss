@@ -6,6 +6,8 @@ metadata:
   footer_description: '[CrysaliCSS](https://github.com/vitto/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/)'
   cssLibrary: test.css
   logo: project-logo.svg
+  fullscreen: Fullscreen
+  code: Snippets
   clipboard:
     default: Clicca per copiare negli appunti
     success: Codice copiato!
@@ -15,11 +17,11 @@ metadata:
       code: "#FFFFFF"
       name: Light
     -
-      code: "#282F20"
-      name: Dark
-    -
-      code: "#3768A6"
+      code: "rgb(150, 150, 150)"
       name: Deep
+    -
+      code: "rgb(70, 70, 70)"
+      name: Dark
     -
       code: "transparent"
       name: None
