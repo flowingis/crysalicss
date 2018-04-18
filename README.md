@@ -68,6 +68,10 @@ Some info about the project folders
 | `src` | Just source files, not used inside the build. |
 | `twig` | The **HTML templates** written with [Twig][twig]. |
 
+---
+
+[CrysaliCSS](https://github.com/vitto/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it).
+
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [material]: https://material.io/icons/
 [source_css_name]: https://github.com/vitto/crysalicss/blob/master/metalsmith.yml#L7
