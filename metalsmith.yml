@@ -6,8 +6,8 @@ metadata:
   footer_description: '[CrysaliCSS](https://github.com/vitto/crysalicss) is made with <i class="material-icons" style="color:#f06856; font-size:16px; position:relative; top:3px;">favorite</i> by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it)'
   cssLibrary: test.css
   logo: ideato-logo.svg
-  fullscreen: Fullscreen
-  code: Snippets
+  fullscreen: Fullscreen mode
+  code: Code snippets
   clipboard:
     default: Clicca per copiare negli appunti
     success: Codice copiato!
