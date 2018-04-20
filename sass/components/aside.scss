@@ -11,9 +11,8 @@
   z-index: 2;
 
   @include element ('logo') {
-    height: auto;
-    margin: $logo-margin;
     height: $logo-max-height;
+    margin: $logo-margin;
     transition: margin tween('movement');
     width: auto;
 
