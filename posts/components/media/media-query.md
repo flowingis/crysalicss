@@ -1,7 +1,7 @@
 ---
 collection: media
 date: 2018-04-11T18:23
-title: Regole media query
+title: Media query
 view: example.twig
 ---
 

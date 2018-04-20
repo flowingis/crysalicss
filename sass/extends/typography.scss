@@ -41,7 +41,7 @@
 
 %font-code {
   background-color: $code-background;
-  color: $code-color;
+  color: $code-color !important;
   font-family: $font-family-code;
   font-size: font-size('small');
 }

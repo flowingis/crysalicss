@@ -1,11 +1,9 @@
 @include block ('aside-menu') {
 
   $link-background-active: $color-02;
-  $link-background-hover: desaturate(mix($color-02, $color-03, 50%), $menu-desaturate);
-  $link-color-hover: $code-background;
+  $link-color-hover: $color-03;
   $link-color: $text-color;
   $menu-background-hover: $code-background;
-  $menu-link-color-hover: $title-color;
 
   list-style-type: none;
   margin: 0;

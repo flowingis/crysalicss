@@ -1,7 +1,7 @@
 @include block ('aside') {
 
   $background-overlay: rgba($main-background, 0.75);
-  $background-menu: $menu-background;
+  $background-menu: $menu-background !default;
 
   bottom: 0;
   left: 0;
@@ -13,8 +13,9 @@
   @include element ('logo') {
     height: auto;
     margin: $logo-margin;
+    height: $logo-max-height;
     transition: margin tween('movement');
-    width: $logo-size;
+    width: auto;
 
     @include media ('<tp') {
       margin: s(1);
@@ -27,11 +28,9 @@
 
   @include element ('go-home') {
     display: block;
-    text-align: center;
   }
 
   @include element ('open') {
-
     backdrop-filter: $backdrop-blur;
     background-color: $background-overlay;
     pointer-events: auto;
@@ -50,7 +49,6 @@
   }
 
   @include element ('slider') {
-
     animation-duration: 2s;
     animation-name: go-out;
     background-color: $background-menu;

@@ -1,11 +1,24 @@
 $backdrop-blur: blur(5px);
 
-$code-background: desaturate(mix($color-02, $color-03, 10%), $code-desaturate);
-$code-color: desaturate(mix($color-02, $color-03, 75%), $code-desaturate);
-
-$example-background: desaturate(mix($color-02, $color-03, 20%), $code-desaturate);
 $horizontal-border: 2px solid $color-02;
 $main-background: mix($color-03, $color-02, $background-vs-menu-difference);
 $menu-background: $color-03;
 $text-color: mix($color-01, $color-03, 70%);
 $title-color: $color-01;
+
+$code-background: $color-04 !default;
+$code-color: desaturate(darken($color-04, 30%), $code-desaturate) !default;
+$code-markdown-background: rgba($code-color, .1) !default;
+$example-background: mix($code-color, $code-background, 25%) !default;
+$clipboard-background-hover: $example-background !default;
+
+$link-background-hover: mix($color-02, $color-04) !default;
+$menu-link-color-hover: $title-color;
+
+@if (lightness($color-04) <= 50%) {
+  $link-background-hover: desaturate(mix($color-02, $color-03, 50%), $menu-desaturate);
+  $code-color: saturate(lighten($color-04, 30%), $code-desaturate);
+  $menu-link-color-hover: $code-color;
+  $code-markdown-background: rgba($code-color, .07);
+  $clipboard-background-hover: mix($code-color, $code-background, 50%);
+}

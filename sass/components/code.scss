@@ -1,7 +1,6 @@
 @include block ('code') {
 
   $clipboard-background: rgba($code-background, 0.75);
-  $clipboard-background-hover: $example-background;
 
   cursor: pointer;
   display: block;
@@ -14,6 +13,7 @@
 
     @include element ('clipboard') {
       background-color: $clipboard-background-hover;
+      color: lighten($code-color, 5%);
     }
   }
 
