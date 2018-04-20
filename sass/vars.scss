@@ -1,7 +1,7 @@
 $backdrop-blur: blur(5px);
 
 $horizontal-border: 2px solid $color-02;
-$main-background: mix($color-03, $color-02, $background-vs-menu-difference);
+$main-background: $color-03;
 $menu-background: $color-03;
 $text-color: mix($color-01, $color-03, 70%);
 $title-color: $color-01;

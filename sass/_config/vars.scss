@@ -4,22 +4,21 @@ $font-family-monospace: monaco, menlo, 'courier new', monospace;
 
 $scheme: 'crysalicss';
 
-$background-vs-menu-difference: 96% !default;
+$font-family-code: $font-family-monospace !default;
+$font-family-text: $font-family-sans !default;
+$font-family-title: $font-family-sans !default;
+
 $code-desaturate: 0% !default;
 $color-01: #22221f !default;
 $color-02: #ffcd00 !default;
 $color-03: #fff !default;
 $color-04: #f7f6ec !default;
-$font-family-code: $font-family-monospace !default;
-$font-family-text: $font-family-sans !default;
-$font-family-title: $font-family-sans !default;
 $logo-margin: s(5) s(3) !default;
 $logo-max-height: 56px !default;
 $menu-desaturate: 20% !default;
 
 @if $scheme == 'ideato' {
-  $background-vs-menu-difference: 100%;
-  $code-desaturate: 35%;
+  $code-desaturate: 25%;
   $color-01: #2b2b2b;
   $color-02: #e3574d;
   $color-03: #fff;
@@ -30,7 +29,6 @@ $menu-desaturate: 20% !default;
 }
 
 @if $scheme == 'google' {
-  $background-vs-menu-difference: 100%;
   $code-desaturate: 20%;
   $color-01: #2b2b2b;
   $color-02: #4688f1;
@@ -42,7 +40,6 @@ $menu-desaturate: 20% !default;
 }
 
 @if $scheme == 'facebook' {
-  $background-vs-menu-difference: 100%;
   $code-desaturate: 20%;
   $color-01: #444950;
   $color-02: #3b5b98;

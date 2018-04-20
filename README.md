@@ -64,7 +64,7 @@ Some info about the project folders
 | `assets` | Where all images are stored. |
 | `js` | Where all **JavaScript** files are stored, like iframe nav or clipboard interaction. |
 | `posts` | Where all **Markdown** documentation posts are stored. You will add HTML components and how they work with [markdown syntax][markdown]. |
-| `sass` | The component library styles, you can customize it's [main colors here][theme_colors]. |
+| `sass` | The component library styles, you can customize it's [main colors here][theme_colors] in combination with the [selected logo][logo]. |
 | `src` | Just source files, not used inside the build. |
 | `twig` | The **HTML templates** written with [Twig][twig]. |
 
@@ -72,6 +72,7 @@ Some info about the project folders
 
 [CrysaliCSS](https://github.com/ideatosrl/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it).
 
+[logo]: https://github.com/ideatosrl/crysalicss/blob/master/metalsmith.yml#L8
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [material]: https://material.io/icons/
 [source_css_name]: https://github.com/ideatosrl/crysalicss/blob/master/metalsmith.yml#L7
