@@ -1,9 +1,14 @@
 @include block ('aside-menu') {
 
+
   $link-background-active: $color-02;
   $link-color-hover: $color-03;
   $link-color: $text-color;
-  $menu-background-hover: $code-background;
+  $menu-background-hover: $color-04 !default;
+
+  @if (lightness($menu-background-hover) <= 50%) {
+    $menu-background-hover: mix($color-03, $color-02, 90%);
+  }
 
   list-style-type: none;
   margin: 0;
@@ -25,6 +30,7 @@
 
   @include element ('title') {
     @extend %font-code;
+    @extend %font-code-background;
     border-bottom: 2px solid transparent;
     border-radius: 4px;
     margin-bottom: s(1);

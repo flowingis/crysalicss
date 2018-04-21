@@ -51,6 +51,7 @@
 
   @include element ('preview') {
     @extend %font-code;
+    background-color: $code-background;
     border: 0;
     margin: 0;
     overflow: scroll;

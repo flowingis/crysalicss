@@ -40,8 +40,15 @@
 }
 
 %font-code {
-  background-color: $code-background;
   color: $code-color !important;
   font-family: $font-family-code;
   font-size: font-size('small');
+}
+
+%font-code-background {
+  @if (lightness($code-background) <= 50%) {
+    background-color: mix($color-03, $color-02, 85%);
+  } @else {
+    background-color: $code-background;
+  }
 }

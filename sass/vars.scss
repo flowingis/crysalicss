@@ -8,6 +8,7 @@ $title-color: $color-01;
 
 $code-background: $color-04 !default;
 $code-color: desaturate(darken($color-04, 30%), $code-desaturate) !default;
+
 $code-markdown-background: rgba($code-color, .1) !default;
 $example-background: mix($code-color, $code-background, 25%) !default;
 $clipboard-background-hover: $example-background !default;
@@ -17,7 +18,7 @@ $menu-link-color-hover: $title-color;
 
 @if (lightness($color-04) <= 50%) {
   $link-background-hover: desaturate(mix($color-02, $color-03, 50%), $menu-desaturate);
-  $code-color: saturate(lighten($color-04, 30%), $code-desaturate);
+  $code-color: saturate(lighten($color-04, 40%), $code-desaturate);
   $menu-link-color-hover: $code-color;
   $code-markdown-background: rgba($code-color, .07);
   $clipboard-background-hover: mix($code-color, $code-background, 50%);

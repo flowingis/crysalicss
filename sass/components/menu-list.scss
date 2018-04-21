@@ -10,6 +10,7 @@
 
   @include element ('title') {
     @extend %font-code;
+    @extend %font-code-background;
     border-radius: 4px;
     margin-bottom: s(1);
     padding: s(0.5) s(1);

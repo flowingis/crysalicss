@@ -28,7 +28,12 @@
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-name: pulse;
-      background-color: $color-02;
+      @supports (backdrop-filter: invert(100%)) {
+        backdrop-filter: invert(100%);
+      }
+      @supports not (backdrop-filter: invert(100%)) {
+        background-color: $color-02;
+      }
       bottom: 0;
       content: '';
       display: none;
@@ -39,7 +44,7 @@
       top: 0;
       transition: opacity tween('movement');
       width: $oveflow-size;
-      z-index: 0;
+      z-index: 1;
     }
 
     @include modifier ('show-overflow') {

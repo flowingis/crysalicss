@@ -19,13 +19,19 @@ $menu-desaturate: 20% !default;
 
 @if $scheme == 'ideato' {
   $code-desaturate: 25%;
-  $color-01: #2b2b2b;
+  $color-01: #3b3e40;
   $color-02: #e3574d;
   $color-03: #fff;
   $color-04: #f6f4ec;
+  $menu-desaturate: 20%;
+
+  // small logo
   $logo-margin: s(3.5) s(2.5);
   $logo-max-height: 96px;
-  $menu-desaturate: 20%;
+
+  // full logo
+  $logo-margin: s(6) s(1.75);
+  $logo-max-height: 42px;
 }
 
 @if $scheme == 'google' {
