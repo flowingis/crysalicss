@@ -1,13 +1,13 @@
 @include block ('aside-menu') {
 
 
-  $link-background-active: $color-02;
-  $link-color-hover: $color-03;
+  $link-background-active: theme('primary');
+  $link-color-hover: theme('background');
   $link-color: $text-color;
-  $menu-background-hover: $color-04 !default;
+  $menu-background-hover: theme('code') !default;
 
   @if (lightness($menu-background-hover) <= 50%) {
-    $menu-background-hover: mix($color-03, $color-02, 90%);
+    $menu-background-hover: mix(theme('background'), theme('primary'), 90%);
   }
 
   list-style-type: none;

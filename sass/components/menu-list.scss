@@ -1,8 +1,8 @@
 @include block ('menu-list') {
 
   $default-link-color: $text-color;
-  $hover-link-background: $color-02; //mix($color-02, $color-03, 50%);
-  $hover-link-color: $color-03;
+  $hover-link-background: theme('primary'); //mix(theme('primary'), theme('background'), 50%);
+  $hover-link-color: theme('background');
 
   list-style-type: none;
   margin: 0;

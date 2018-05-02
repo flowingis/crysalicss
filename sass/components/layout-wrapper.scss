@@ -32,7 +32,7 @@
         backdrop-filter: invert(100%);
       }
       @supports not (backdrop-filter: invert(100%)) {
-        background-color: $color-02;
+        background-color: theme('primary');
       }
       bottom: 0;
       content: '';
@@ -56,7 +56,7 @@
 
   @include element ('grid') {
     align-items: flex-start;
-    background-color: $color-03;
+    background-color: theme('background');
     display: inline-flex;
     flex-direction: column;
     padding: s(1);

@@ -6,6 +6,8 @@
   color: $text-color;
   pointer-events: auto;
 
+  content: theme('text');
+
   @include media ('<ds') {
     padding: 0 s(1);
   }

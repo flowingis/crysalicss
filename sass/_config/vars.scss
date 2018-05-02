@@ -2,55 +2,15 @@ $font-family-sans: -apple-system, BlinkMacSystemFont, lato, Helvetica, arial, sa
 $font-family-serif: georgia, 'times new roman', times, serif;
 $font-family-monospace: monaco, menlo, 'courier new', monospace;
 
-$scheme: 'crysalicss';
+@import '../themes/crysalicss';
+// @import '../themes/facebook';
+// @import '../themes/google';
+// @import '../themes/ideato';
+
+@function theme($property) {
+  @return get($theme, $property);
+}
 
 $font-family-code: $font-family-monospace !default;
 $font-family-text: $font-family-sans !default;
 $font-family-title: $font-family-sans !default;
-
-$code-desaturate: 0% !default;
-$color-01: #22221f !default;
-$color-02: #ffcd00 !default;
-$color-03: #fff !default;
-$color-04: #f7f6ec !default;
-$logo-margin: s(5) s(3) !default;
-$logo-max-height: 56px !default;
-$menu-desaturate: 20% !default;
-
-@if $scheme == 'ideato' {
-  $code-desaturate: 25%;
-  $color-01: #3b3e40;
-  $color-02: #e3574d;
-  $color-03: #fff;
-  $color-04: #f6f4ec;
-  $menu-desaturate: 20%;
-
-  // small logo
-  $logo-margin: s(3.5) s(2.5);
-  $logo-max-height: 96px;
-
-  // full logo
-  $logo-margin: s(6) s(1.75);
-  $logo-max-height: 42px;
-}
-
-@if $scheme == 'google' {
-  $code-desaturate: 20%;
-  $color-01: #2b2b2b;
-  $color-02: #4688f1;
-  $color-03: #fff;
-  $color-04: #f2f2f2;
-  $logo-margin: s(6) s(2.5);
-  $logo-max-height: 32px;
-  $menu-desaturate: 0%;
-}
-
-@if $scheme == 'facebook' {
-  $code-desaturate: 20%;
-  $color-01: #444950;
-  $color-02: #3b5b98;
-  $color-03: #fff;
-  $color-04: #1e2229;
-  $menu-desaturate: 0%;
-  $logo-margin: s(4.5) s(4);
-}

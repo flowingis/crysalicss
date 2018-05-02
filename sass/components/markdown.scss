@@ -1,7 +1,7 @@
 @include block ('markdown') {
 
   $article-text-color: $text-color;
-  $table-alt-background: mix($color-02, $color-03, 10%);
+  $table-alt-background: mix(theme('primary'), theme('background'), 10%);
   $markdown-border: 2px solid $table-alt-background;
 
   @include modifier ('documentation') {
@@ -133,7 +133,7 @@
     }
 
     th {
-      background-color: mix($color-02, $color-03, 50%);
+      background-color: mix(theme('primary'), theme('background'), 50%);
       color: $title-color;
     }
 

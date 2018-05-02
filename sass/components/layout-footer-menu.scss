@@ -1,6 +1,6 @@
 @include block ('layout-footer-menu') {
 
-  $background-link-hover: $color-02;
+  $background-link-hover: theme('primary');
 
   list-style-type: none;
   margin: 0;

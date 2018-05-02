@@ -47,7 +47,7 @@
 
 %font-code-background {
   @if (lightness($code-background) <= 50%) {
-    background-color: mix($color-03, $color-02, 85%);
+    background-color: mix(theme('background'), theme('primary'), 85%);
   } @else {
     background-color: $code-background;
   }

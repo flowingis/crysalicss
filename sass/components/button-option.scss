@@ -4,8 +4,8 @@
   $button-text-color-hover: $text-color;
   $button-text-color-active: $text-color;
   $button-icon-color: $text-color;
-  $button-icon-color-hover: $color-02;
-  $button-icon-color-active: $color-02;
+  $button-icon-color-hover: theme('primary');
+  $button-icon-color-active: theme('primary');
 
   background-color: transparent;
   color: $button-text-color;
@@ -25,7 +25,7 @@
   }
 
   @include modifier ('active') {
-    background-color: mix($color-02, $color-03, 15%);
+    background-color: mix(theme('primary'), theme('background'), 15%);
     color: $button-text-color-active;
 
     @include element ('icon') {

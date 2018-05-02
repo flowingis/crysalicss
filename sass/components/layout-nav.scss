@@ -16,7 +16,7 @@
 
   @include element ('container') {
     align-items: stretch;
-    background-color: $color-03;
+    background-color: theme('background');
     box-shadow: shadow('card');
     display: flex;
     margin: auto;
