@@ -17,7 +17,7 @@ git clone https://github.com/ideatosrl/crysalicss.git component-library && rm -r
 
 This script will create a folder named `component-library` where the template is ready to be used to host your CSS components. This also removes the `.git` folder to ensure it is correctly tracked into your project.
 
-Then install the node packages:
+Then install it's node packages:
 
 ```
 npm install
