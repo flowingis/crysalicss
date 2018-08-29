@@ -1,6 +1,6 @@
 ---
 title: Indice dei componenti
-date: 2018-04-12T14:10
+date: 2018-08-29T11:53
 view: default.twig
 ---
 
@@ -10,20 +10,63 @@ Questo strumento serve a condividere la documentazione di componenti web. Al suo
 
 Viene utilizzato dai team di sviluppo per seguire una linea guida sull'utilizzo corretto dei componenti modulari che si inseriscono nei template contenenti markup.
 
-###### Codice SASS
+---
 
-I componenti sono sviluppati con le seguenti librerie [SASS][sass]
+#### Writing markdown pages
 
-- [Frontsize][frontsize]
-- [Include media][include-media]
+You should put your CSS documentation inside `posts` folder, in the code below you'll see how a page should be written.
 
-###### Frontsize
+Front matter structure
 
-Serve per poter scrivere codice con approccio [BEM][bem] con più facilità, mette a disposizione una serie di *funzioni* e *mixin* fatti per velocizzare lo sviluppo e prevenire alcuni problemi di organizzazione del codice SASS.
+| Variable | Optional | Description |
+|-|:-:|-|
+| `collection` | **✗** | Used to **group** components. |
+| `date` | ✓ | The **date** of the documentation page created. |
+| `title` | **✗** | The **title** of the documentation page created. |
+| `view` | **✗** | The template page used, it should be used with `example.twig` template. |
+| `snippets` | ✓ | An array of code snippets, used to display all the components of this page. |
+| `snippets[0].title` | ✓ | A title of the component. |
+| `snippets[0].text` | ✓ | A description of the component (markdown is supported). |
+| `snippets[0].html` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
+| `snippets[0].render` | ✓ | The rendered HTML of the component's code snippet, this is used just to improve render with additional html which should be not copied as code snippet. |
 
-###### Include media
+A template page as example:
 
-Questa libreria mette a disposizione alcuni *mixin* per poter scrivere regole media query in maniera più semantica.
+```yaml
+---
+collection: buttons
+date: 2018-08-29T11:24
+title: Button
+view: example.twig
+
+snippets:
+  -
+    title: 'The main buttons'
+    text: 'A basic button, used all around the app.'
+    html: |
+      <a href="#" class="button">
+        A simple button
+      </a>
+  -
+    text: 'Button used to cancel actions. You can use `render` field to display a different content to make better explanations on how components are displayed.'
+    html: |
+      <a href="#" class="button button--cancel">
+        Cancel
+      </a>
+    render: |
+      <div style="display: flex;">
+        <a href="#" class="button button--cancel">
+          Cancel
+        </a>
+        <a href="#" class="button">
+          Do it!
+        </a>
+      </div>
+---
+
+This is the optional markdown block with additional documentation.
+
+```
 
 ---
 

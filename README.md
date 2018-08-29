@@ -76,6 +76,63 @@ Some info about the project folders
 
 ---
 
+#### Writing markdown pages
+
+You should put your CSS documentation inside `posts` folder, in the code below you'll see how a page should be written.
+
+Front matter structure
+
+| Variable | Optional | Description |
+|-|:-:|-|
+| `collection` | **✗** | Used to **group** components. |
+| `date` | ✓ | The **date** of the documentation page created. |
+| `title` | **✗** | The **title** of the documentation page created. |
+| `view` | **✗** | The template page used, it should be used with `example.twig` template. |
+| `snippets` | ✓ | An array of code snippets, used to display all the components of this page. |
+| `snippets[0].title` | ✓ | A title of the component. |
+| `snippets[0].text` | ✓ | A description of the component (markdown is supported). |
+| `snippets[0].html` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
+| `snippets[0].render` | ✓ | The rendered HTML of the component's code snippet, this is used just to improve render with additional html which should be not copied as code snippet. |
+
+A template page as example:
+
+```yaml
+---
+collection: buttons
+date: 2018-08-29T11:24
+title: Button
+view: example.twig
+
+snippets:
+  -
+    title: 'The main buttons'
+    text: 'A basic button, used all around the app.'
+    html: |
+      <a href="#" class="button">
+        A simple button
+      </a>
+  -
+    text: 'Button used to cancel actions. You can use `render` field to display a different content to make better explanations on how components are displayed.'
+    html: |
+      <a href="#" class="button button--cancel">
+        Cancel
+      </a>
+    render: |
+      <div style="display: flex;">
+        <a href="#" class="button button--cancel">
+          Cancel
+        </a>
+        <a href="#" class="button">
+          Do it!
+        </a>
+      </div>
+---
+
+This is the optional markdown block with additional documentation.
+
+```
+---
+
 [CrysaliCSS](https://github.com/ideatosrl/crysalicss) is made with ❤ by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it).
 
 [logo]: https://github.com/ideatosrl/crysalicss/blob/master/metalsmith.yml#L8
