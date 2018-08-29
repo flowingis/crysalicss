@@ -14,6 +14,11 @@
   <div class="layout-wrapper__widget">
 
     {% set code %}{{ item.html }}{% endset %}
+    {% if item.render is defined %}
+      {% set renderedCode %}{{ item.render }}{% endset %}
+    {% else %}
+      {% set renderedCode %}{{ item.html }}{% endset %}
+    {% endif %}
 
     <div class="layout-wrapper__container">
       <div class="layout-wrapper__grid">
@@ -31,7 +36,7 @@
               document.addEventListener('DOMContentLoaded', disableAnchors);
             </script>
             <body class="html-iframe">
-              {{ code }}
+              {{ renderedCode }}
             </body>
 
             {% if metadata.library.css is iterable %}
