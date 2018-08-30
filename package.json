@@ -14,7 +14,7 @@
     "simple-http": "python -m SimpleHTTPServer 8000",
     "source-assets": "cp -r ./assets/* ./source/img",
     "source-posts": "cp -r posts/* source/",
-    "source-styles": "cp src/test.css source/css/library/test.css",
+    "source-styles": "cp src/test.css source/css/library/test.css && cp ./node_modules/jquery/dist/jquery.slim.min.js source/js/jquery.slim.min.js",
     "source": "npm run source-assets && npm run source-posts && npm run source-styles && npm run vendor-css && mkdir -p ./build",
     "vendor-css": "cp ./node_modules/prismjs/themes/prism.css ./source/css/prism.css && cp -r ./node_modules/material-design-icons/iconfont/* ./source/css",
     "watch-css": "watch -p './sass/**/*.scss' -c 'npm run sass'",

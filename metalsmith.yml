@@ -7,8 +7,8 @@ metadata:
   library:
     css:
       - test.css
-    # js:
-    #   - test.js
+    js:
+      - jquery.slim.min.js
   logo: crysalicss-logo.svg
   fullscreen: Fullscreen mode
   code: Code snippets
