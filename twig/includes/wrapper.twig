@@ -35,9 +35,6 @@
               }
               document.addEventListener('DOMContentLoaded', disableAnchors);
             </script>
-            <body class="html-iframe">
-              {{ renderedCode }}
-            </body>
 
             {% if metadata.library.css is iterable %}
               {% for css in metadata.library.css %}
@@ -63,6 +60,10 @@
                 <script type="text/javascript" charset="utf-8" src="{{ relativePath }}js/{{ metadata.library.js }}?v={{ global.faker.random.uuid }}"></script>
               {% endif %}
             {% endif %}
+
+            <body class="html-iframe">
+              {{ renderedCode }}
+            </body>
           </html>
         {% endset %}
         <iframe srcdoc="{{ html|escape }}" width="100%" height="150px" class="layout-wrapper__iframe" style="width: 300px;"></iframe>
