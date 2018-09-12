@@ -1,6 +1,6 @@
 {
   "name": "crysalicss",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A component library template for CSS code",
   "main": "metalsmith.js",
   "scripts": {

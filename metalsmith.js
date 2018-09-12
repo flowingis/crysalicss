@@ -6,6 +6,7 @@ const marked = require('marked')
 const metalsmith = require('metalsmith')
 const mPrism = require('metalsmith-prism')
 const prism = require('prismjs')
+const loadLanguages = require('prismjs/components/');
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
 
@@ -14,6 +15,8 @@ var m = yaml.safeLoad(fs.readFileSync('metalsmith.yml', 'utf-8'))
 if (typeof m.collections === 'undefined') {
   m.collections = {}
 }
+
+loadLanguages(m.prism.languages);
 
 m.twig.global = {
   faker: faker,

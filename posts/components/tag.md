@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A basic label, used all around the app.'
-    html: |
+    code: |
       <div class="tag">
         <div class="tag__text">Tag name</div>
       </div>
@@ -22,7 +22,7 @@ snippets:
       </div>
   -
     text: 'A basic label, used for **minor** updates.'
-    html: |
+    code: |
       <div class="tag tag--silent">
         <div class="tag__text">Silent</div>
       </div>
@@ -34,7 +34,7 @@ snippets:
       </div>
   -
     text: 'A label, used for **problems to solve**.'
-    html: |
+    code: |
       <div class="tag tag--error">
         <div class="tag__text">Error</div>
       </div>
@@ -46,7 +46,7 @@ snippets:
       </div>
   -
     text: 'A label, used for **changes** to the app.'
-    html: |
+    code: |
       <div class="tag tag--info">
         <div class="tag__text">Information</div>
       </div>
@@ -58,7 +58,7 @@ snippets:
       </div>
   -
     text: 'A label, used for **goals** succeded.'
-    html: |
+    code: |
       <div class="tag tag--success">
         <div class="tag__text">Success</div>
       </div>

@@ -79,3 +79,17 @@ twig:
   directory: twig
   view: default.twig
   cache: false
+prism:
+  languages: # https://prismjs.com/#languages-list
+    - css
+    - haml
+    - handlebars
+    - javascript
+    - json
+    - jsx
+    - less
+    - markup
+    - pug
+    - scss
+    - twig
+    - yaml

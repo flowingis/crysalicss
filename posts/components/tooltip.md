@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A basic tooltip, it should be used inside other components as in the `button` example.'
-    html: |
+    code: |
       <a href="#" class="button button--inline button--outline tooltip">
         Tooltip
         <div class="tooltip__container">
@@ -29,7 +29,7 @@ snippets:
       </div>
   -
     text: 'A tooltip with a title.'
-    html: |
+    code: |
       <a href="#" class="button button--inline button--outline tooltip">
         Tooltip rich
         <div class="tooltip__container">
@@ -61,7 +61,7 @@ snippets:
       </div>
   -
     text: 'A tooltip with a title.'
-    html: |
+    code: |
       <a href="#" class="button button--inline button--outline tooltip tooltip--show">
         Tooltip shown by default
         <div class="tooltip__container">

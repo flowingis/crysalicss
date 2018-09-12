@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A basic form, used all around the app.'
-    html: |
+    code: |
       <form class="form">
         <div class="form__row">
           <div class="form__cell form__cell--half">

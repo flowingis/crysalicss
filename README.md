@@ -91,8 +91,9 @@ Front matter structure
 | `snippets` | ✓ | An array of code snippets, used to display all the components of this page. |
 | `snippets[0].title` | ✓ | A title of the component. |
 | `snippets[0].text` | ✓ | A description of the component (markdown is supported). |
-| `snippets[0].html` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
+| `snippets[0].code` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
 | `snippets[0].render` | ✓ | The rendered HTML of the component's code snippet, this is used just to improve render with additional html which should be not copied as code snippet. |
+| `snippets[0].extension` | ✓ | Defines the language used by `code` to be properly colored. The file `metalsmith.yml` contains the defined available languages for `prismjs` which is used to color your code. Find `prism.languages` and check if your languages are included. You can checkout the available [list of languages][primsjs-syntax] used in the [prismjs website][primsjs]. |
 
 A template page as example:
 
@@ -142,3 +143,5 @@ This is the optional markdown block with additional documentation.
 [source_css_path]: https://github.com/ideatosrl/crysalicss/blob/master/package.json#L17
 [theme_colors]: https://github.com/ideatosrl/crysalicss/blob/master/sass/_config/vars.scss
 [twig]: https://twig.symfony.com/
+[primsjs-syntax]: https://prismjs.com/#languages-list
+[primsjs]: https://prismjs.com/

@@ -27,8 +27,9 @@ Front matter structure
 | `snippets` | ✓ | An array of code snippets, used to display all the components of this page. |
 | `snippets[0].title` | ✓ | A title of the component. |
 | `snippets[0].text` | ✓ | A description of the component (markdown is supported). |
-| `snippets[0].html` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
+| `snippets[0].code` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
 | `snippets[0].render` | ✓ | The rendered HTML of the component's code snippet, this is used just to improve render with additional html which should be not copied as code snippet. |
+| `snippets[0].extension` | ✓ | Defines the language used by `code` to be properly colored. The file `metalsmith.yml` contains the defined available languages for `prismjs` which is used to color your code. Find `prism.languages` and check if your languages are included. You can checkout the available [list of languages][primsjs-syntax] used in the [prismjs website][primsjs]. |
 
 A template page as example:
 
@@ -43,13 +44,13 @@ snippets:
   -
     title: 'The main buttons'
     text: 'A basic button, used all around the app.'
-    html: |
+    code: |
       <a href="#" class="button">
         A simple button
       </a>
   -
     text: 'Button used to cancel actions. You can use `render` field to display a different content to make better explanations on how components are displayed.'
-    html: |
+    code: |
       <a href="#" class="button button--cancel">
         Cancel
       </a>
@@ -102,7 +103,7 @@ Ci sono situazioni dove gli attributi `style` vanno comunque mantenuti, generalm
 
 Lo snippet sarà da customizzare con i dati che arrivano dal database in base al sistema di templating che state utilizzando:
 
-```html
+```twig
 <div class="set--text-right" style="background-image: url('{{ database.image }}');">
   {{ database.text }}
 </div>
@@ -112,3 +113,5 @@ Lo snippet sarà da customizzare con i dati che arrivano dal database in base al
 [frontsize]: https://github.com/ideatosrl/frontsize
 [include-media]: http://include-media.com
 [sass]: https://sass-lang.com
+[primsjs-syntax]: https://prismjs.com/#languages-list
+[primsjs]: https://prismjs.com/

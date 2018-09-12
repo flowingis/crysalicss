@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A form **radio** used by default'
-    html: |
+    code: |
       <label class="input-radio">
         <input class="input-radio__field" type="radio" name="some-radio-name" value="1">
         <i class="input-radio__icon material-icons">radio_button_unchecked</i>

@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A form **checkbox** used as switch'
-    html: |
+    code: |
       <label class="input-switch">
         <input class="input-switch__field" type="checkbox" name="switch-checkbox-name" value="1">
         <div class="input-switch__box">
@@ -19,7 +19,7 @@ snippets:
       </label>
   -
     text: 'A form **checkbox** used as switch with a tooltip'
-    html: |
+    code: |
       <label class="input-switch tooltip">
         <input class="input-switch__field" type="checkbox" name="switch-checkbox-name" value="1">
         <div class="input-switch__box">

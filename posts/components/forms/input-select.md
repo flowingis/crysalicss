@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A form **select** used by default'
-    html: |
+    code: |
       <div class="input-select">
         <select class="input-select__field">
           <option value="0">Select your destiny...</option>
@@ -24,7 +24,7 @@ snippets:
       </div>
   -
     text: 'A form **select** small'
-    html: |
+    code: |
       <div class="input-select input-select--small">
         <select class="input-select__field">
           <option value="0">Select your destiny...</option>

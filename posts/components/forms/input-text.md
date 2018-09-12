@@ -7,7 +7,7 @@ view: example.twig
 snippets:
   -
     text: 'A form **text** used as by default, it contains the state message used in `input-text__message` selector.'
-    html: |
+    code: |
       <label class="input-text">
         <input type="text" class="input-text__field" name="" value="" placeholder="Please, insert something or go away.">
         <p class="input-text__message">
@@ -16,7 +16,7 @@ snippets:
       </label>
   -
     text: 'A form **text** used as by default, it contains the state message shown with  `input-text--default` modifier.'
-    html: |
+    code: |
       <label class="input-text input-text--default">
         <input type="text" class="input-text__field" name="" value="" placeholder="Please, insert something or go away.">
         <p class="input-text__message">
@@ -25,7 +25,7 @@ snippets:
       </label>
   -
     text: 'A form **text** used as by default, it contains the state message shown with  `input-text--error` modifier.'
-    html: |
+    code: |
       <label class="input-text input-text--error">
         <input type="text" class="input-text__field" name="" value="Heilo. Let's go." placeholder="Please, insert something or go away.">
         <i class="input-text__icon material-icons">mail</i>
