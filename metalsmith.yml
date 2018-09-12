@@ -3,13 +3,14 @@ metadata:
   tab_title: Component library • Project name
   description: CSS Component library for the project **project name**
   footer_title: Project name component library
-  footer_description: '[CrysaliCSS](https://github.com/vitto/crysalicss) is made with <i class="material-icons" style="color:#f06856; font-size:16px; position:relative; top:3px;">favorite</i> by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it)'
+  footer_description: '[CrysaliCSS](https://github.com/ideatosrl/crysalicss) is made with <i class="material-icons" style="color:#f06856; font-size:16px; position:relative; top:3px;">favorite</i> by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it)'
   library:
     css:
-      - test.css
+      - vendor-style.css
+      - style.css
     js:
       - jquery.slim.min.js
-  logo: crysalicss-logo.svg
+  logo: ideato-logo.svg
   fullscreen: Fullscreen mode
   code: Code snippets
   clipboard:
