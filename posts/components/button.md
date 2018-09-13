@@ -16,7 +16,7 @@ snippets:
       <a class="button" href="#">
         A simple button
       </a>
-    extension: haml
+    syntax: haml
   -
     text: "An inline button that doesn't fill the container area by it's width."
     code: |
@@ -27,14 +27,14 @@ snippets:
       <a class="button button--inline" href="#">
         A simple button
       </a>
-    extension: handlebars
+    syntax: handlebars
   -
     text: "Used for actions which should attract user attention."
     code: |
       <a class="button button--inline button--action {% if item.isEnabled %} button--disabled {% endif %}" href="#">
         Read more
       </a>
-    extension: twig
+    syntax: twig
     render: |
       <a class="button button--inline button--action" href="#">
         Read more

@@ -44,8 +44,10 @@
   @include element ('clipboard') {
     @extend %tiny-text;
     background-color: $clipboard-background;
+    border-radius: 100px 0 0 100px;
     color: $code-color;
     padding: s(0.5);
+    padding-left: s(1);
     transition: background-color tween('hover');
   }
 

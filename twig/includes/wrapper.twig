@@ -21,13 +21,11 @@
       {% set renderedCode %}{{ item.code }}{% endset %}
     {% endif %}
 
-    {% if item.extension is defined %}
-      {% set extension %}{{ item.extension|lower }}{% endset %}
+    {% if item.syntax is defined %}
+      {% set syntax %}{{ item.syntax|lower }}{% endset %}
     {% else %}
-      {% set extension %}markup{% endset %}
+      {% set syntax %}markup{% endset %}
     {% endif %}
-
-    <!-- {{ extension }} -->
 
     <div class="layout-wrapper__container">
       <div class="layout-wrapper__grid">
@@ -82,9 +80,9 @@
     <div class="code" data-clipboard-target="#snippet-{{ loop.index }}">
       <div class="code__info">
         <div class="code__clipboard" data-text-success="{{ metadata.clipboard.success }}" data-text-error="{{ metadata.clipboard.error }}">{{ metadata.clipboard.default }}</div>
-        <div class="code__language">{{ extension }}</div>
+        <div class="code__language">{{ syntax }}</div>
       </div>
-      <pre class="code__preview">{{ global.prism.highlight(code, global.prism.languages[extension], extension)|trim }}</pre>
+      <pre class="code__preview">{{ global.prism.highlight(code, global.prism.languages[syntax], syntax)|trim }}</pre>
       <textarea id="snippet-{{ loop.index }}" class="code__source">{{ code|trim }}</textarea>
     </div>
   </div>
