@@ -25,9 +25,12 @@
             <div class="menus__item">
               {% include 'includes/menu-list.twig' %}
             </div>
-        {% endfor %}
+          {% endfor %}
         </div>
       </div>
+
+      {% include 'includes/components.twig' %}
+
       <div class="markdown markdown--documentation">
         {{ contents }}
       </div>

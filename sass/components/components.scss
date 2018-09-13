@@ -1,0 +1,68 @@
+@include block ('components') {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: s(-1);
+  margin-right: s(-1);
+
+  @include element ('item') {
+    cursor: pointer;
+    padding: s(1);
+    width: 100%;
+
+    @include media ('>ml') {
+      width: 50%;
+    }
+
+    @include media ('>tp') {
+      width: 33.3333%;
+    }
+
+    @include media ('>tl') {
+      width: 25%;
+    }
+
+    @include media ('>ds') {
+      width: 20%;
+    }
+
+    &:hover {
+      @include element ('border') {
+        &::after {
+          box-shadow: $components-border-shadow-hover;
+        }
+      }
+    }
+  }
+
+  @include element ('border') {
+    position: relative;
+
+    &::after {
+      bottom: 0;
+      box-shadow: $components-border-shadow;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: box-shadow tween('hover');
+    }
+  }
+
+  @include element ('wrapper') {
+    overflow: hidden;
+    padding: s(1);
+  }
+
+  @include element ('iframe') {
+    border: 0;
+    width: 100%;
+  }
+
+  @include element ('title') {
+    margin-top: s(0.5);
+    @extend %title;
+  }
+}

@@ -1,80 +1,29 @@
 <div class="layout-wrapper">
   <div class="layout-wrapper__infos">
-    {% if item.title is defined %}
+    {% if component.title is defined %}
       <div class="layout-wrapper__title">
-        {{ item.title }}
+        {{ component.title }}
       </div>
     {% endif %}
-    {% if item.text is defined %}
+    {% if component.text is defined %}
       <div class="layout-wrapper__description markdown">
-        {{ global.marked(item.text) }}
+        {{ global.marked(component.text) }}
       </div>
     {% endif %}
   </div>
   <div class="layout-wrapper__widget">
 
-    {% set code %}{{ item.code }}{% endset %}
+    {% set code %}{{ component.code }}{% endset %}
 
-    {% if item.render is defined %}
-      {% set renderedCode %}{{ item.render }}{% endset %}
-    {% else %}
-      {% set renderedCode %}{{ item.code }}{% endset %}
-    {% endif %}
-
-    {% if item.syntax is defined %}
-      {% set syntax %}{{ item.syntax|lower }}{% endset %}
+    {% if component.syntax is defined %}
+      {% set syntax %}{{ component.syntax|lower }}{% endset %}
     {% else %}
       {% set syntax %}markup{% endset %}
     {% endif %}
 
     <div class="layout-wrapper__container">
       <div class="layout-wrapper__grid">
-        {% set html %}
-          <html class="html-iframe">
-            <script>
-              function disableAnchors () {
-                var anchors = document.getElementsByTagName('a');
-                for(i=0, len=anchors.length; i<len; i++){
-                  anchors[i].addEventListener('click', function(e){
-                    e.preventDefault();
-                  });
-                }
-              }
-              document.addEventListener('DOMContentLoaded', disableAnchors);
-            </script>
-
-            {% if metadata.library.css is iterable %}
-              {% for css in metadata.library.css %}
-                  <link rel="stylesheet" href="{{ relativePath }}css/library/{{ css }}?v={{ global.faker.random.uuid }}">
-              {% endfor %}
-            {% else %}
-              <link rel="stylesheet" href="{{ relativePath }}css/library/{{ metadata.library.css }}?v={{ global.faker.random.uuid }}">
-            {% endif %}
-
-            <style>
-              .html-iframe {
-                background: transparent !important;
-                margin: 0 !important;
-                overflow: hidden;
-              }
-            </style>
-
-            {% if metadata.library.js is defined %}
-              {% if metadata.library.js is iterable %}
-                {% for js in metadata.library.js %}
-                  <script type="text/javascript" charset="utf-8" src="{{ relativePath }}js/{{ js }}?v={{ global.faker.random.uuid }}"></script>
-                {% endfor %}
-              {% else %}
-                <script type="text/javascript" charset="utf-8" src="{{ relativePath }}js/{{ metadata.library.js }}?v={{ global.faker.random.uuid }}"></script>
-              {% endif %}
-            {% endif %}
-
-            <body class="html-iframe">
-              {{ renderedCode }}
-            </body>
-          </html>
-        {% endset %}
-        <iframe srcdoc="{{ html|escape }}" width="100%" height="150px" class="layout-wrapper__iframe" style="width: 300px;"></iframe>
+        {% include 'iframe.twig' with { 'component': component, 'selector': 'layout-wrapper__iframe' } %}
       </div>
     </div>
 

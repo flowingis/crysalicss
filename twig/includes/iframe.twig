@@ -1,0 +1,58 @@
+{% if selector is defined %}
+  {% set cssClasses %}class="{{ selector }}"{% endset %}
+{% else %}
+  {% set cssClasses = '' %}
+{% endif %}
+
+{% if component.render is defined %}
+  {% set renderedCode %}{{ component.render }}{% endset %}
+{% else %}
+  {% set renderedCode %}{{ component.code }}{% endset %}
+{% endif %}
+
+{% set html %}
+  <html class="html-iframe">
+    <script>
+      function disableAnchors () {
+        var anchors = document.getElementsByTagName('a');
+        for(i=0, len=anchors.length; i<len; i++){
+          anchors[i].addEventListener('click', function(e){
+            e.preventDefault();
+          });
+        }
+      }
+      document.addEventListener('DOMContentLoaded', disableAnchors);
+    </script>
+
+    {% if metadata.library.css is iterable %}
+      {% for css in metadata.library.css %}
+          <link rel="stylesheet" href="{{ relativePath }}css/library/{{ css }}?v={{ global.faker.random.uuid }}">
+      {% endfor %}
+    {% else %}
+      <link rel="stylesheet" href="{{ relativePath }}css/library/{{ metadata.library.css }}?v={{ global.faker.random.uuid }}">
+    {% endif %}
+
+    <style>
+      .html-iframe {
+        background: transparent !important;
+        margin: 0 !important;
+        overflow: hidden;
+      }
+    </style>
+
+    {% if metadata.library.js is defined %}
+      {% if metadata.library.js is iterable %}
+        {% for js in metadata.library.js %}
+          <script type="text/javascript" charset="utf-8" src="{{ relativePath }}js/{{ js }}?v={{ global.faker.random.uuid }}"></script>
+        {% endfor %}
+      {% else %}
+        <script type="text/javascript" charset="utf-8" src="{{ relativePath }}js/{{ metadata.library.js }}?v={{ global.faker.random.uuid }}"></script>
+      {% endif %}
+    {% endif %}
+
+    <body class="html-iframe">
+      {{ renderedCode }}
+    </body>
+  </html>
+{% endset %}
+<iframe srcdoc="{{ html|escape }}" width="100%" height="150px" {{ cssClasses }} style="width: 300px;"></iframe>

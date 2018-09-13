@@ -6,8 +6,12 @@ $menu-background: theme('background');
 $text-color: mix(theme('text'), theme('background'), 70%);
 $title-color: theme('text');
 
+$components-border-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05) inset;
+$components-border-shadow-hover: 0 0 0 2px rgba(theme('primary'), 0.5) inset;
+
 $code-background: theme('code') !default;
 $code-color: desaturate(darken(theme('code'), 30%), 20%) !default;
+$table-alt-background: mix(theme('primary'), theme('background'), 10%);
 
 $code-markdown-background: rgba($code-color, .1) !default;
 $example-background: mix($code-color, $code-background, 15%) !default;

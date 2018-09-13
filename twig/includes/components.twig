@@ -1,0 +1,25 @@
+<div class="components-group">
+  {% for components in metadata.collections %}
+    <div class="components-group__item">
+      <div class="components-group__title">
+        {{ components[0].collection }}
+      </div>
+      <div class="components">
+        {% for component in components %}
+          <div class="components__item">
+            {% if component.collection is defined %}
+                <div class="components__border">
+                  <div class="components__wrapper">
+                    {% include 'iframe.twig' with { 'component': component.snippets[0], 'selector': 'components__iframe' } %}
+                  </div>
+                </div>
+                <div class="components__title">
+                  {{ component.title }}
+                </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

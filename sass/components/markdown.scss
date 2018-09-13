@@ -1,7 +1,6 @@
 @include block ('markdown') {
 
   $article-text-color: $text-color;
-  $table-alt-background: mix(theme('primary'), theme('background'), 10%);
   $markdown-border: 2px solid $table-alt-background;
 
   @include modifier ('documentation') {

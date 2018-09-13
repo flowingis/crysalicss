@@ -1,0 +1,24 @@
+@include block ('components-group') {
+  $item-border: 2px solid $table-alt-background;
+
+  border-top: $horizontal-border;
+  margin-top: s(4);
+  padding-top: s(4);
+
+  @include element ('title') {
+    @extend %big-title;
+    color: $title-color;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  @include element ('item') {
+    & + & {
+      border-top: $item-border;
+      margin-top: s(4);
+      padding-top: s(4);
+    }
+  }
+}
