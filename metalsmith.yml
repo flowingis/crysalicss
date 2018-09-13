@@ -11,7 +11,7 @@ metadata:
     js:
       - jquery.slim.min.js
   logo: ideato-logo.svg
-  fullscreen: Fullscreen mode
+  fullscreen: Fullscreen
   code: Code snippets
   clipboard:
     default: Clicca per copiare negli appunti

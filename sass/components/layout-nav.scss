@@ -10,10 +10,6 @@
   right: 0;
   z-index: 1;
 
-  @include media ('<tp') {
-    display: none;
-  }
-
   @include element ('container') {
     align-items: stretch;
     background-color: theme('background');
@@ -31,6 +27,12 @@
       border-left: $border;
       margin-left: s(1);
       padding-left: s(1);
+    }
+
+    @include modifier ('no-mobile') {
+      @include media ('<tp') {
+        display: none;
+      }
     }
   }
 }

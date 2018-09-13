@@ -12,6 +12,12 @@
     width: 100%;
   }
 
+  @include modifier ('no-mobile') {
+    @include media ('<tp') {
+      display: none;
+    }
+  }
+
   @include element ('item') {
     list-style-type: none;
   }

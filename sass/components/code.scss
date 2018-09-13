@@ -3,7 +3,7 @@
   $clipboard-background: rgba($code-background, 0.75);
 
   cursor: pointer;
-  display: block;
+  display: none;
   position: relative;
 
   &:hover {
@@ -15,6 +15,10 @@
       background-color: $clipboard-background-hover;
       color: lighten($code-color, 5%);
     }
+  }
+
+  @include media ('>ml') {
+    display: block;
   }
 
   @include modifier ('hidden') {
