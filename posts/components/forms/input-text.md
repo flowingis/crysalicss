@@ -16,6 +16,7 @@ snippets:
       </label>
   -
     text: 'A form **text** used as by default, it contains the state message shown with  `input-text--default` modifier.'
+    cover: true
     code: |
       <label class="input-text input-text--default">
         <input type="text" class="input-text__field" name="" value="" placeholder="Please, insert something or go away.">

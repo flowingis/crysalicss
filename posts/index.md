@@ -27,6 +27,7 @@ Front matter structure
 | `snippets` | ✓ | An array of code snippets, used to display all the components of this page. |
 | `snippets[0].title` | ✓ | A title of the component. |
 | `snippets[0].text` | ✓ | A description of the component (markdown is supported). |
+| `snippets[0].cover` | ✓ | Used to choose which snippet is showed on index page. |
 | `snippets[0].code` | **✗** | The code snippet of the component, will be copied in the clipboard and rendered on the page if `render` is not defined. |
 | `snippets[0].render` | ✓ | The rendered HTML of the component's code snippet, this is used just to improve render with additional html which should be not copied as code snippet. |
 | `snippets[0].syntax` | ✓ | Defines the language used by `code` to be properly colored. The file `metalsmith.yml` contains the defined available languages for `prismjs` which is used to color your code. Find `prism.languages` and check if your languages are included. You can checkout the available [list of languages][primsjs-syntax] used in the [prismjs website][primsjs]. |
@@ -51,6 +52,7 @@ snippets:
   -
     title: 'The main buttons'
     text: 'You can define color syntax like in this example.'
+    cover: true
     code: |
       <a href="#" className="button">
         A simple button

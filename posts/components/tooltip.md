@@ -61,6 +61,7 @@ snippets:
       </div>
   -
     text: 'A tooltip with a title.'
+    cover: true
     code: |
       <a href="#" class="button button--inline button--outline tooltip tooltip--show">
         Tooltip shown by default

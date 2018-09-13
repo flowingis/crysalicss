@@ -11,7 +11,13 @@
             {% if component.collection is defined %}
               <div class="components__border">
                 <div class="components__wrapper">
-                  {% include 'iframe.twig' with { 'component': component.snippets[0], 'selector': 'components__iframe' } %}
+                  {% set index = 0 %}
+                  {% for snippet in component.snippets %}
+                    {% if snippet.cover is defined %}
+                      {% set index = loop.index0 %}
+                    {% endif %}
+                  {% endfor %}
+                  {% include 'iframe.twig' with { 'component': component.snippets[index], 'selector': 'components__iframe' } %}
                 </div>
               </div>
               <div class="components__title">

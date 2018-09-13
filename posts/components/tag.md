@@ -34,6 +34,7 @@ snippets:
       </div>
   -
     text: 'A label, used for **problems to solve**.'
+    cover: true
     code: |
       <div class="tag tag--error">
         <div class="tag__text">Error</div>
