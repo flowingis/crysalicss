@@ -20,12 +20,22 @@ snippets:
   -
     text: "An inline button that doesn't fill the container area by it's width."
     code: |
-      <a class="button button--inline" href="#">
-        Inline button
+      <a class="button button--inline {{ item.isEnabled }}" href="{{ item.url }}">
+        {{ item.text }}
       </a>
+    render: |
+      <a class="button button--inline" href="#">
+        A simple button
+      </a>
+    extension: handlebars
   -
     text: "Used for actions which should attract user attention."
     code: |
+      <a class="button button--inline button--action {% if item.isEnabled %} button--disabled {% endif %}" href="#">
+        Read more
+      </a>
+    extension: twig
+    render: |
       <a class="button button--inline button--action" href="#">
         Read more
       </a>
@@ -35,7 +45,6 @@ snippets:
       <a class="button button--inline button--danger" href="#">
         Delete your data
       </a>
-      <script>console.log('ciaone');</script>
   -
     text: "Used for **safe** actions which should attract user attention."
     code: |
