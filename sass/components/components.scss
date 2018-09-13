@@ -36,6 +36,7 @@
   }
 
   @include element ('border') {
+    display: block;
     position: relative;
 
     &::after {
@@ -62,7 +63,9 @@
   }
 
   @include element ('title') {
-    margin-top: s(0.5);
     @extend %title;
+    display: inline-block;
+    margin-top: s(0.5);
+    text-decoration: none;
   }
 }

@@ -6,18 +6,19 @@
       </div>
       <div class="components">
         {% for component in components %}
-          <div class="components__item">
+          {% set url %}{{ relativePath }}{{ component.path|replace({ '.md': '.html' }) }}{% endset %}
+          <a href="{{ url }}" class="components__item">
             {% if component.collection is defined %}
-                <div class="components__border">
-                  <div class="components__wrapper">
-                    {% include 'iframe.twig' with { 'component': component.snippets[0], 'selector': 'components__iframe' } %}
-                  </div>
+              <div class="components__border">
+                <div class="components__wrapper">
+                  {% include 'iframe.twig' with { 'component': component.snippets[0], 'selector': 'components__iframe' } %}
                 </div>
-                <div class="components__title">
-                  {{ component.title }}
-                </div>
+              </div>
+              <div class="components__title">
+                {{ component.title }}
+              </div>
             {% endif %}
-          </div>
+          </a>
         {% endfor %}
       </div>
     </div>
