@@ -2,11 +2,8 @@
 
   margin-bottom: s(5);
   margin-top: s(5);
+  text-align: center;
   user-select: none;
-
-  @include media ('<ds') {
-    text-align: center;
-  }
 
   @include element ('title') {
     @extend %big-title;
