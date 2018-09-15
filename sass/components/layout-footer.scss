@@ -13,5 +13,6 @@
 
   @include element ('description') {
     @extend %small-text;
+    margin-top: s(0.5);
   }
 }

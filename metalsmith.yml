@@ -1,8 +1,8 @@
 metadata:
-  title: Project name
-  tab_title: Component library • Project name
-  description: CSS Component library for the project **project name**
-  footer_title: Project name component library
+  title: CrysaliCSS
+  tab_title: CrysaliCSS
+  description: A component library for your design system
+  footer_title: CrysaliCSS is a component library for your design system
   footer_description: '[CrysaliCSS](https://github.com/ideatosrl/crysalicss) is made with <i class="material-icons" style="color:#f06856; font-size:16px; position:relative; top:3px;">favorite</i> by [vitto](https://github.com/vitto/) @ [ideato](https://www.ideato.it)'
   library:
     css:
@@ -14,9 +14,9 @@ metadata:
   fullscreen: Fullscreen
   code: Code snippets
   clipboard:
-    default: Clicca per copiare negli appunti
-    success: Codice copiato!
-    error: Il tuo browser non supporta questa azione
+    default: Click to copy code in your clipboard
+    success: Code copied!
+    error: Your browser does't seems to support clipboard copy
   colors:
     -
       code: "#FFFFFF"
