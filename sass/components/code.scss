@@ -12,8 +12,13 @@
     }
 
     @include element ('clipboard') {
-      background-color: $clipboard-background-hover;
+      background-color: theme('background');
       color: lighten($code-color, 5%);
+      padding-right: 0;
+    }
+
+    @include element ('syntax') {
+      color: theme('primary');
     }
   }
 
@@ -26,7 +31,6 @@
   }
 
   @include element ('info') {
-    backdrop-filter: $backdrop-blur;
     bottom: 0;
     display: inline-flex;
     position: absolute;
@@ -35,14 +39,14 @@
     transition: transform tween('hover');
   }
 
-  @include element ('language') {
+  @include element ('syntax') {
     @extend %tiny-bold-text;
     background-color: theme('background');
     color: $code-color;
     padding: s(0.5);
     text-transform: uppercase;
     transform: translate(0, 0);
-    transition: background-color tween('hover');
+    transition: color tween('hover');
   }
 
   @include element ('clipboard') {
@@ -52,7 +56,7 @@
     color: $code-color;
     padding: s(0.5);
     padding-left: s(1);
-    transition: background-color tween('hover');
+    transition: background-color tween('hover'), padding-right tween('hover');
   }
 
   @include element ('preview') {

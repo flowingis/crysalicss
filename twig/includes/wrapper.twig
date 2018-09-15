@@ -30,7 +30,7 @@
     <div class="code" data-clipboard-target="#snippet-{{ loop.index }}">
       <div class="code__info">
         <div class="code__clipboard" data-text-success="{{ metadata.clipboard.success }}" data-text-error="{{ metadata.clipboard.error }}">{{ metadata.clipboard.default }}</div>
-        <div class="code__language">{{ syntax }}</div>
+        <div class="code__syntax">{{ syntax }}</div>
       </div>
       <pre class="code__preview">{{ global.prism.highlight(code, global.prism.languages[syntax], syntax)|trim }}</pre>
       <textarea id="snippet-{{ loop.index }}" class="code__source">{{ code|trim }}</textarea>
