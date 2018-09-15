@@ -1,4 +1,4 @@
-<img width="100" height="auto" src="https://raw.githubusercontent.com/ideatosrl/crysalicss/master/src/crysalicss-logo.png">
+<img width="100" height="auto" src="https://raw.githubusercontent.com/ideatosrl/crysalicss/master/src/crysalicss-by-ideato-logo.png">
 
 # CrysaliCSS
 A component library template to store your CSS code
