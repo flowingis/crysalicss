@@ -10,7 +10,7 @@ metadata:
       - style.css
     js:
       - jquery.slim.min.js
-  logo: ideato-logo.svg
+  logo: crysalicss-by-ideato-logo.svg
   fullscreen: Fullscreen
   code: Code snippets
   clipboard:
